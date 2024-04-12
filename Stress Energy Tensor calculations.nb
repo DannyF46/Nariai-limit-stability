@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     69102,       1724]
-NotebookOptionsPosition[     67569,       1678]
-NotebookOutlinePosition[     68208,       1702]
-CellTagsIndexPosition[     68165,       1699]
+NotebookDataLength[     69663,       1741]
+NotebookOptionsPosition[     67596,       1678]
+NotebookOutlinePosition[     68769,       1719]
+CellTagsIndexPosition[     68726,       1716]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,7 +22,7 @@ Cell[BoxData[
  RowBox[{" ", 
   RowBox[{
    RowBox[{
-   "\"\<GR package by Giovanni Formighieri (Universidade Federal de Santa \
+   "\"\<GR_v2 package by Giovanni Formighieri (Universidade Federal de Santa \
 Catarina, 2015) -- \
 https://library.wolfram.com/infocenter/MathSource/8847/\>\"", ";"}], 
    "\[IndentingNewLine]", 
@@ -44,7 +44,7 @@ https://library.wolfram.com/infocenter/MathSource/8847/\>\"", ";"}],
    3.921936526564685*^9}, {3.9219366220532303`*^9, 3.92193663905908*^9}, {
    3.921939403289508*^9, 3.921939407065421*^9}, {3.921939511409258*^9, 
    3.9219395752083874`*^9}, {3.921939748201724*^9, 3.9219397987116003`*^9}, 
-   3.9219419241840453`*^9}],
+   3.9219419241840453`*^9, 3.9219545343175964`*^9}],
 
 Cell[BoxData[
  RowBox[{" ", 
@@ -1679,14 +1679,31 @@ observer. Does not change with v.\>\"", ";"}], "\[IndentingNewLine]",
 WindowSize->{1920, 989},
 WindowMargins->{{-4, Automatic}, {Automatic, -4}},
 PrintingCopies->1,
+PrintingStartingPageNumber->1,
 PrintingPageRange->{32000, 32000},
-PrintingOptions->{"Magnification"->1.,
+PageHeaders->{{
+   Cell[
+    TextData[{
+      StyleBox[
+       CounterBox["Page"], "PageNumber"], "   ", "|", " ", 
+      StyleBox[
+       ValueBox["FileName"], "Header"]}], "Header", 
+    CellMargins -> {{0, Inherited}, {Inherited, Inherited}}], None, None}, {
+  None, None, None}},
+PageFooters->{{None, None, None}, {None, None, None}},
+PageHeaderLines->{False, False},
+PageFooterLines->{False, False},
+PrintingOptions->{"FacingPages"->False,
+"FirstPageFace"->Right,
+"FirstPageFooter"->False,
+"FirstPageHeader"->False,
+"Magnification"->1.,
 "PaperOrientation"->"Portrait",
 "PaperSize"->{612, 792},
 "PrintCellBrackets"->True,
 "PrintMultipleHorizontalPages"->False,
 "PrintRegistrationMarks"->False,
-"PrintingMargins"->{{54, 54}, {72, 72}}},
+"PrintingMargins"->{{99, 99}, {72, 72}}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1701,31 +1718,31 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1142, 26, 88, "Input"],
-Cell[1703, 48, 924, 17, 69, "Input"],
-Cell[2630, 67, 1884, 53, 123, "Input"],
-Cell[4517, 122, 782, 16, 69, "Input"],
-Cell[5302, 140, 449, 11, 88, "Input"],
-Cell[5754, 153, 1174, 32, 69, "Input"],
-Cell[6931, 187, 1748, 44, 145, "Input"],
-Cell[8682, 233, 1418, 39, 69, "Input"],
-Cell[10103, 274, 5348, 129, 126, "Input"],
-Cell[15454, 405, 3362, 77, 183, "Input"],
-Cell[18819, 484, 2069, 45, 69, "Input"],
-Cell[20891, 531, 1713, 25, 119, "Input"],
-Cell[22607, 558, 2177, 57, 107, "Input"],
-Cell[24787, 617, 13172, 326, 536, "Input"],
-Cell[37962, 945, 1255, 31, 88, "Input"],
-Cell[39220, 978, 1535, 37, 88, "Input"],
-Cell[40758, 1017, 1369, 32, 69, "Input"],
-Cell[42130, 1051, 3379, 83, 108, "Input"],
-Cell[45512, 1136, 3567, 83, 107, "Input"],
-Cell[49082, 1221, 2628, 63, 107, "Input"],
-Cell[51713, 1286, 2566, 62, 88, "Input"],
-Cell[54282, 1350, 3729, 86, 107, "Input"],
-Cell[58014, 1438, 3748, 91, 120, "Input"],
-Cell[61765, 1531, 3757, 91, 128, "Input"],
-Cell[65525, 1624, 2040, 52, 71, "Input"]
+Cell[558, 20, 1169, 26, 88, "Input"],
+Cell[1730, 48, 924, 17, 69, "Input"],
+Cell[2657, 67, 1884, 53, 123, "Input"],
+Cell[4544, 122, 782, 16, 69, "Input"],
+Cell[5329, 140, 449, 11, 88, "Input"],
+Cell[5781, 153, 1174, 32, 69, "Input"],
+Cell[6958, 187, 1748, 44, 145, "Input"],
+Cell[8709, 233, 1418, 39, 69, "Input"],
+Cell[10130, 274, 5348, 129, 126, "Input"],
+Cell[15481, 405, 3362, 77, 183, "Input"],
+Cell[18846, 484, 2069, 45, 69, "Input"],
+Cell[20918, 531, 1713, 25, 119, "Input"],
+Cell[22634, 558, 2177, 57, 107, "Input"],
+Cell[24814, 617, 13172, 326, 395, "Input"],
+Cell[37989, 945, 1255, 31, 88, "Input"],
+Cell[39247, 978, 1535, 37, 88, "Input"],
+Cell[40785, 1017, 1369, 32, 69, "Input"],
+Cell[42157, 1051, 3379, 83, 108, "Input"],
+Cell[45539, 1136, 3567, 83, 107, "Input"],
+Cell[49109, 1221, 2628, 63, 107, "Input"],
+Cell[51740, 1286, 2566, 62, 88, "Input"],
+Cell[54309, 1350, 3729, 86, 107, "Input"],
+Cell[58041, 1438, 3748, 91, 120, "Input"],
+Cell[61792, 1531, 3757, 91, 128, "Input"],
+Cell[65552, 1624, 2040, 52, 71, "Input"]
 }
 ]
 *)

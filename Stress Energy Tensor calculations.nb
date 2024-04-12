@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     94341,       2249]
-NotebookOptionsPosition[     92483,       2188]
-NotebookOutlinePosition[     92831,       2203]
-CellTagsIndexPosition[     92788,       2200]
+NotebookDataLength[     69102,       1724]
+NotebookOptionsPosition[     67569,       1678]
+NotebookOutlinePosition[     68208,       1702]
+CellTagsIndexPosition[     68165,       1699]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1049,8 +1049,6 @@ v=const (incoming) lines and u=const (outgoing) lines, respectively\>\"",
    3.9219418688638983`*^9, 3.9219419039686575`*^9}, {3.9219423495435495`*^9, 
    3.9219423554960155`*^9}, 3.921943620426282*^9}],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[{
  RowBox[{"\"\<Plot \!\(\*SubscriptBox[\(T\), \(uu\)]\), \
 \!\(\*SubscriptBox[\(T\), \(vv\)]\), \!\(\*SubscriptBox[\(T\), \(uv\)]\) as \
@@ -1135,75 +1133,6 @@ functions of (r,v)\>\"", ";"}], "\[IndentingNewLine]",
   "]"}]}], "Input",
  CellChangeTimes->{{3.921942540052559*^9, 3.921942558214428*^9}, {
   3.921942674365303*^9, 3.921942678205541*^9}}],
-
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 
-    2, $CellContext`v$$ = 0., Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`v$$], 0., "v"}, 0, 10}, {{
-       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
-       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}}, Typeset`size$$ = {
-    460., {102., 107.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`v$12492$$ = 
-    0, $CellContext`rN$12493$$ = 0, $CellContext`R0$12494$$ = 0}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, 
-      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 
-        2, $CellContext`v$$ = 0.}, "ControllerVariables" :> {
-        Hold[$CellContext`v$$, $CellContext`v$12492$$, 0], 
-        Hold[$CellContext`rN$$, $CellContext`rN$12493$$, 0], 
-        Hold[$CellContext`R0$$, $CellContext`R0$12494$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Plot[{
-         $CellContext`Tuuofrv[$CellContext`r, $CellContext`v$$, \
-$CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`Tvvofrv[$CellContext`r, $CellContext`v$$, \
-$CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`Tuvofrv[$CellContext`r, $CellContext`v$$, \
-$CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 10}, 
-        AxesLabel -> {"r", "\!\(\*SubscriptBox[\(T\), \(\[Mu]\[Nu]\)]\)"}, 
-        ExclusionsStyle -> Dashed, PlotPoints -> 50, PlotRange -> Automatic, 
-        AspectRatio -> 1/GoldenRatio, GridLines -> Automatic, PlotLegends -> 
-        LineLegend[{
-           Directive[Blue, Dashed, Thick], 
-           Directive[Red, Dotted, Thick], 
-           Directive[
-            Darker[Green], DotDashed, Thick]}, {
-          "\!\(\*SubscriptBox[\(T\), \(uu\)]\)", 
-           "\!\(\*SubscriptBox[\(T\), \(vv\)]\)", 
-           "\!\(\*SubscriptBox[\(T\), \(uv\)]\)"}], LabelStyle -> 
-        Directive[Bold, 20], PlotStyle -> {
-          Directive[Blue, Dashed, Thick], 
-          Directive[Red, Dotted, Thick], 
-          Directive[
-           Darker[Green], DotDashed, Thick]}, AxesStyle -> Thick], 
-      "Specifications" :> {{{$CellContext`v$$, 0., "v"}, 0, 10, Appearance -> 
-         "Labeled"}, {{$CellContext`rN$$, 2, "rN"}, 0, 10, Appearance -> 
-         "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, Appearance -> 
-         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{511., {177., 183.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.921937759985219*^9, 3.921939157963173*^9, 
-  3.9219397305263896`*^9, 3.9219433742600317`*^9, 3.9219439529950495`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{"\"\<Plot \!\(\*SubscriptBox[\(T\), \(uu\)]\) as a function of (r,v) \
@@ -1290,73 +1219,6 @@ demonstrate early-time behaviour\>\"", ";"}], "\[IndentingNewLine]",
    3.921938563750785*^9, {3.921942573692998*^9, 3.9219426532212043`*^9}, {
    3.9219426839583597`*^9, 3.92194270039668*^9}}],
 
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 2, 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
-       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}}, Typeset`size$$ = {
-    491., {110., 115.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`rN$12614$$ = 
-    0, $CellContext`R0$12615$$ = 0}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, 
-      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 2}, 
-      "ControllerVariables" :> {
-        Hold[$CellContext`rN$$, $CellContext`rN$12614$$, 0], 
-        Hold[$CellContext`R0$$, $CellContext`R0$12615$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Plot[{
-         $CellContext`Tuuofrv[$CellContext`r, 
-          0.01, $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`Tuuofrv[$CellContext`r, 
-          5., $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`Tuuofrv[$CellContext`r, 
-          10., $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`Tuuofrv[$CellContext`r, 
-          20., $CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 
-         10}, AxesLabel -> {"r", "\!\(\*SubscriptBox[\(T\), \(uu\)]\)"}, 
-        ExclusionsStyle -> Dashed, PlotPoints -> 50, PlotRange -> Automatic, 
-        AspectRatio -> 1/GoldenRatio, GridLines -> Automatic, LabelStyle -> 
-        Directive[Bold, 20], PlotStyle -> {
-          Directive[Black, Thick], 
-          Directive[Blue, Dashed, Thick], 
-          Directive[Red, Dotted, Thick], 
-          Directive[
-           Darker[Green], DotDashed, Thick]}, PlotLegends -> LineLegend[{
-           Directive[Black, Thick], 
-           Directive[Blue, Dashed, Thick], 
-           Directive[Red, Dotted, Thick], 
-           Directive[
-            Darker[Green], DotDashed, Thick]}, {
-          "v=0.01", "v=5", "v=10", "v=20"}], AxesStyle -> Thick], 
-      "Specifications" :> {{{$CellContext`rN$$, 2, "rN"}, 0, 10, Appearance -> 
-         "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, Appearance -> 
-         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{542., {171., 177.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{{3.921937912591973*^9, 3.921937940433686*^9}, 
-   3.9219385791319494`*^9, 3.9219391595377655`*^9, 3.92194337578088*^9, 
-   3.921943960616968*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
 Cell[BoxData[{
  RowBox[{"\"\<Plot \!\(\*SubscriptBox[\(T\), \(vv\)]\) as a function of (r,v) \
 at various values of v. \!\(\*SubscriptBox[\(T\), \(vv\)]\) does not change \
@@ -1422,64 +1284,6 @@ in time\>\"", ";"}], "\[IndentingNewLine]",
   3.9219426620690317`*^9, 3.9219426684439125`*^9}, {3.9219427043160653`*^9, 
   3.921942741140841*^9}}],
 
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 2, 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
-       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}}, Typeset`size$$ = {
-    474., {97., 102.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`rN$12730$$ = 
-    0, $CellContext`R0$12731$$ = 0}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, 
-      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 2}, 
-      "ControllerVariables" :> {
-        Hold[$CellContext`rN$$, $CellContext`rN$12730$$, 0], 
-        Hold[$CellContext`R0$$, $CellContext`R0$12731$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Plot[{
-         $CellContext`Tvvofrv[$CellContext`r, 
-          0., $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`Tvvofrv[$CellContext`r, 
-          5., $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`Tvvofrv[$CellContext`r, 
-          10., $CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 
-         10}, AxesLabel -> {"r", "\!\(\*SubscriptBox[\(T\), \(vv\)]\)"}, 
-        ExclusionsStyle -> Dashed, PlotPoints -> 50, PlotRange -> Automatic, 
-        AspectRatio -> 1/GoldenRatio, GridLines -> Automatic, LabelStyle -> 
-        Directive[Bold, 20], PlotStyle -> {
-          Directive[Blue], 
-          Directive[Red, Dashed], 
-          Directive[
-           Darker[Green], Dashing -> 0.01]}, PlotLegends -> 
-        LineLegend[{"v=0", "v=5", "v=10"}], AxesStyle -> Thick], 
-      "Specifications" :> {{{$CellContext`rN$$, 2, "rN"}, 0, 10, Appearance -> 
-         "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, Appearance -> 
-         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{525., {158., 164.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.9219383228393087`*^9, 3.921939165776231*^9, 
-  3.9219433817636967`*^9, 3.921943960727775*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
 Cell[BoxData[{
  RowBox[{"\"\<Plot \!\(\*SubscriptBox[\(T\), \(uv\)]\) as a function of (r,v) \
 at various values of v. \!\(\*SubscriptBox[\(T\), \(uv\)]\) does not change \
@@ -1543,64 +1347,6 @@ in time, but does approach +\[Infinity] as r\[RightArrow]\[Infinity]\>\"",
      RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}]}], 
   "]"}]}], "Input",
  CellChangeTimes->{{3.921942745404252*^9, 3.921942788324289*^9}}],
-
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 2, 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
-       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}}, Typeset`size$$ = {
-    474., {113., 118.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`rN$12838$$ = 
-    0, $CellContext`R0$12839$$ = 0}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, 
-      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 2}, 
-      "ControllerVariables" :> {
-        Hold[$CellContext`rN$$, $CellContext`rN$12838$$, 0], 
-        Hold[$CellContext`R0$$, $CellContext`R0$12839$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Plot[{
-         $CellContext`Tuvofrv[$CellContext`r, 
-          0., $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`Tuvofrv[$CellContext`r, 
-          5., $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`Tuvofrv[$CellContext`r, 
-          10., $CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 
-         10}, AxesLabel -> {"r", "\!\(\*SubscriptBox[\(T\), \(uv\)]\)"}, 
-        ExclusionsStyle -> Dashed, PlotPoints -> 50, PlotRange -> Automatic, 
-        AspectRatio -> 1/GoldenRatio, GridLines -> Automatic, LabelStyle -> 
-        Directive[Bold, 20], PlotStyle -> {
-          Directive[Blue], 
-          Directive[Red, Dashed], 
-          Directive[
-           Darker[Green], Dashing -> 0.01]}, PlotLegends -> 
-        LineLegend[{"v=0", "v=5", "v=10"}], AxesStyle -> Thick], 
-      "Specifications" :> {{{$CellContext`rN$$, 2, "rN"}, 0, 10, Appearance -> 
-         "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, Appearance -> 
-         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{525., {174., 180.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.921938611440632*^9, 3.9219391673196974`*^9, 
-  3.9219433832921553`*^9, 3.9219439621652155`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{"\"\<Comparing \!\(\*SubscriptBox[\(T\), \(uu\)]\) and \
@@ -1689,76 +1435,6 @@ match \!\(\*SubscriptBox[\(T\), \(vv\)]\)\>\"", ";"}], "\[IndentingNewLine]",
   "]"}]}], "Input",
  CellChangeTimes->{{3.9219381939346313`*^9, 3.921938194077993*^9}, {
    3.9219427999418087`*^9, 3.9219428603661857`*^9}, 3.921943630506302*^9}],
-
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 2, 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
-       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}}, Typeset`size$$ = {
-    534., {120., 124.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`rN$12945$$ = 
-    0, $CellContext`R0$12946$$ = 0}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, 
-      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 2}, 
-      "ControllerVariables" :> {
-        Hold[$CellContext`rN$$, $CellContext`rN$12945$$, 0], 
-        Hold[$CellContext`R0$$, $CellContext`R0$12946$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Plot[{
-         $CellContext`Tvvofrv[$CellContext`r, 
-          1., $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`Tuuofrv[$CellContext`r, 
-          0.01, $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`Tuuofrv[$CellContext`r, 
-          0.05, $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`Tuuofrv[$CellContext`r, 
-          0.5, $CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 
-         1.1 $CellContext`rN$$}, 
-        AxesLabel -> {"r", "\!\(\*SubscriptBox[\(T\), \(uu\)]\)"}, 
-        ExclusionsStyle -> Dashed, PlotPoints -> 50, PlotRange -> Automatic, 
-        AspectRatio -> 1/GoldenRatio, GridLines -> Automatic, LabelStyle -> 
-        Directive[Bold, 20], PlotStyle -> {
-          Directive[Black, Thick], 
-          Directive[Blue, Dashed, Thick], 
-          Directive[Red, Dotted, Thick], 
-          Directive[
-           Darker[Green], DotDashed, Thick]}, PlotLegends -> LineLegend[{
-           Directive[Black, Thick], 
-           Directive[Blue, Dashed, Thick], 
-           Directive[Red, Dotted, Thick], 
-           Directive[
-            Darker[Green], DotDashed, Thick]}, {
-          "\!\(\*SubscriptBox[\(T\), \(vv\)]\)", 
-           "\!\(\*SubscriptBox[\(T\), \(uu\)]\), v=0.01", 
-           "\!\(\*SubscriptBox[\(T\), \(uu\)]\), v=0.05", 
-           "\!\(\*SubscriptBox[\(T\), \(uu\)]\), v=0.5"}], AxesStyle -> 
-        Thick], "Specifications" :> {{{$CellContext`rN$$, 2, "rN"}, 0, 10, 
-         Appearance -> "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, 
-         Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{585., {180., 186.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.9219381157249603`*^9, 3.9219382141839914`*^9, 
-  3.921939168449392*^9, 3.9219433843052177`*^9, 3.9219439632290173`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{"\"\<Energy density \!\(\*SuperscriptBox[\(T\), \(tt\)]\) for \
@@ -1853,72 +1529,6 @@ degenerate horizon, suggesting the formation of a firewall\>\"",
    3.9219428790604353`*^9}, {3.921942932883914*^9, 3.9219429583154745`*^9}, 
    3.921943216900881*^9}],
 
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 2, 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
-       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}}, Typeset`size$$ = {
-    474., {120., 124.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`rN$13061$$ = 
-    0, $CellContext`R0$13062$$ = 0}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, 
-      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 2}, 
-      "ControllerVariables" :> {
-        Hold[$CellContext`rN$$, $CellContext`rN$13061$$, 0], 
-        Hold[$CellContext`R0$$, $CellContext`R0$13062$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Plot[{
-         $CellContext`Tupttofrv[$CellContext`r, 
-          0., $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`Tupttofrv[$CellContext`r, 
-          10., $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`Tupttofrv[$CellContext`r, 
-          20., $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`Tupttofrv[$CellContext`r, 
-          40., $CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 4},
-         AxesLabel -> {"r", "\!\(\*SuperscriptBox[\(T\), \(tt\)]\)"}, 
-        ExclusionsStyle -> Dashed, PlotPoints -> 50, 
-        PlotRange -> {{0, 4}, {-0.1, 3}}, AspectRatio -> 1/GoldenRatio, 
-        GridLines -> Automatic, LabelStyle -> Directive[Bold, 20], PlotStyle -> {
-          Directive[Black, Thick], 
-          Directive[Blue, Dashed, Thick], 
-          Directive[Red, Dotted, Thick], 
-          Directive[
-           Darker[Green], DotDashed, Thick]}, PlotLegends -> LineLegend[{
-           Directive[Black, Thick], 
-           Directive[Blue, Dashed, Thick], 
-           Directive[Red, Dotted, Thick], 
-           Directive[
-            Darker[Green], DotDashed, Thick]}, {
-          "v=0", "v=10", "v=20", "v=40"}], AxesStyle -> Thick], 
-      "Specifications" :> {{{$CellContext`rN$$, 2, "rN"}, 0, 10, Appearance -> 
-         "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, Appearance -> 
-         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{525., {180., 186.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.921939175931853*^9, 3.921941804272323*^9, 
-  3.921941876619079*^9, 3.9219433913050184`*^9, 3.9219439708813553`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
 Cell[BoxData[{
  RowBox[{"\"\<Energy density as experienced by an incoming (v=const) geodesic \
 observer at various values of v.\>\"", ";"}], "\[IndentingNewLine]", 
@@ -2012,74 +1622,6 @@ observer at various values of v.\>\"", ";"}], "\[IndentingNewLine]",
   3.9219386435096045`*^9, {3.9219429632512884`*^9, 3.9219430295165143`*^9}, 
    3.9219430677660713`*^9, {3.9219436413704576`*^9, 3.9219436429777217`*^9}}],
 
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 2, 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
-       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}}, Typeset`size$$ = {
-    491., {113., 118.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`rN$13177$$ = 
-    0, $CellContext`R0$13178$$ = 0}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, 
-      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 2}, 
-      "ControllerVariables" :> {
-        Hold[$CellContext`rN$$, $CellContext`rN$13177$$, 0], 
-        Hold[$CellContext`R0$$, $CellContext`R0$13178$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Plot[{
-         $CellContext`vconstGeodesicEnDen[$CellContext`r, 
-          0.01, $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`vconstGeodesicEnDen[$CellContext`r, 
-          5., $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`vconstGeodesicEnDen[$CellContext`r, 
-          10., $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`vconstGeodesicEnDen[$CellContext`r, 
-          20., $CellContext`rN$$, $CellContext`R0$$], 
-         $CellContext`vconstGeodesicEnDen[$CellContext`r, $CellContext`v, \
-$CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 10}, 
-        AxesLabel -> {"r", "\!\(\*SubscriptBox[\(\[Rho]\), \(obs, v\)]\)"}, 
-        ExclusionsStyle -> Dashed, PlotPoints -> 50, 
-        PlotRange -> {{0, 10}, {-0.01, 0.12}}, AspectRatio -> 1/GoldenRatio, 
-        GridLines -> Automatic, LabelStyle -> Directive[Bold, 20], PlotStyle -> {
-          Directive[Black, Thick], 
-          Directive[Blue, Dashed, Thick], 
-          Directive[Red, Dotted, Thick], 
-          Directive[
-           Darker[Green], DotDashed, Thick]}, PlotLegends -> LineLegend[{
-           Directive[Black, Thick], 
-           Directive[Blue, Dashed, Thick], 
-           Directive[Red, Dotted, Thick], 
-           Directive[
-            Darker[Green], DotDashed, Thick]}, {
-          "v=0.01", "v=5", "v=10", "v=20"}], AxesStyle -> Thick], 
-      "Specifications" :> {{{$CellContext`rN$$, 2, "rN"}, 0, 10, Appearance -> 
-         "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, Appearance -> 
-         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{542., {174., 180.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.9219383840517335`*^9, 3.921938701601465*^9, 
-  3.921939189513586*^9, 3.921943417083433*^9, 3.921943984453627*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
 Cell[BoxData[{
  RowBox[{"\"\<Energy density as experienced by an outgoing (u=const) geodesic \
 observer. Does not change with v.\>\"", ";"}], "\[IndentingNewLine]", 
@@ -2132,62 +1674,19 @@ observer. Does not change with v.\>\"", ";"}], "\[IndentingNewLine]",
      RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}]}], 
   "]"}]}], "Input",
  CellChangeTimes->{
-  3.921938629772663*^9, {3.921943034409335*^9, 3.9219430717144165`*^9}}],
-
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 
-    2, $CellContext`v$$ = 0, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
-       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}, {{
-       Hold[$CellContext`v$$], 0, "v"}, 0, 10}}, Typeset`size$$ = {
-    360., {102., 106.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`rN$13295$$ = 
-    0, $CellContext`R0$13296$$ = 0, $CellContext`v$13297$$ = 0}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, 
-      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 
-        2, $CellContext`v$$ = 0}, "ControllerVariables" :> {
-        Hold[$CellContext`rN$$, $CellContext`rN$13295$$, 0], 
-        Hold[$CellContext`R0$$, $CellContext`R0$13296$$, 0], 
-        Hold[$CellContext`v$$, $CellContext`v$13297$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Plot[{
-         $CellContext`uconstGeodesicEnDen[$CellContext`r, $CellContext`v$$, \
-$CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 10}, 
-        AxesLabel -> {"r", "\!\(\*SubscriptBox[\(\[Rho]\), \(obs, u\)]\)"}, 
-        ExclusionsStyle -> Dashed, PlotPoints -> 50, PlotRange -> Automatic, 
-        AspectRatio -> 1/GoldenRatio, GridLines -> Automatic, LabelStyle -> 
-        Directive[Bold, 20], PlotStyle -> {
-          Directive[Blue, Thick]}, AxesStyle -> Thick], 
-      "Specifications" :> {{{$CellContext`rN$$, 2, "rN"}, 0, 10, Appearance -> 
-         "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, Appearance -> 
-         "Labeled"}, {{$CellContext`v$$, 0, "v"}, 0, 10, Appearance -> 
-         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{411., {176., 182.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.9219384248879957`*^9, 3.9219386315695763`*^9, 
-  3.921939229401506*^9, 3.921943455318429*^9, 3.9219440233831987`*^9}]
-}, Open  ]]
+  3.921938629772663*^9, {3.921943034409335*^9, 3.9219430717144165`*^9}}]
 },
-WindowSize->{958, 984},
-WindowMargins->{{395, Automatic}, {Automatic, 68}},
+WindowSize->{1920, 989},
+WindowMargins->{{-4, Automatic}, {Automatic, -4}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{612, 792},
+"PrintCellBrackets"->True,
+"PrintMultipleHorizontalPages"->False,
+"PrintRegistrationMarks"->False,
+"PrintingMargins"->{{54, 54}, {72, 72}}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -2213,44 +1712,20 @@ Cell[8682, 233, 1418, 39, 69, "Input"],
 Cell[10103, 274, 5348, 129, 126, "Input"],
 Cell[15454, 405, 3362, 77, 183, "Input"],
 Cell[18819, 484, 2069, 45, 69, "Input"],
-Cell[20891, 531, 1713, 25, 124, "Input"],
+Cell[20891, 531, 1713, 25, 119, "Input"],
 Cell[22607, 558, 2177, 57, 107, "Input"],
-Cell[24787, 617, 13172, 326, 399, "Input"],
+Cell[24787, 617, 13172, 326, 536, "Input"],
 Cell[37962, 945, 1255, 31, 88, "Input"],
 Cell[39220, 978, 1535, 37, 88, "Input"],
-Cell[40758, 1017, 1369, 32, 88, "Input"],
-Cell[CellGroupData[{
-Cell[42152, 1053, 3379, 83, 184, "Input"],
-Cell[45534, 1138, 3375, 64, 377, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[48946, 1207, 3567, 83, 202, "Input"],
-Cell[52516, 1292, 3174, 62, 365, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[55727, 1359, 2628, 63, 107, "Input"],
-Cell[58358, 1424, 2752, 53, 339, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[61147, 1482, 2566, 62, 88, "Input"],
-Cell[63716, 1546, 2755, 53, 371, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[66508, 1604, 3729, 86, 107, "Input"],
-Cell[70240, 1692, 3363, 65, 383, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[73640, 1762, 3748, 91, 120, "Input"],
-Cell[77391, 1855, 3161, 61, 383, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[80589, 1921, 3757, 91, 128, "Input"],
-Cell[84349, 2014, 3331, 63, 371, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[87717, 2082, 2040, 52, 71, "Input"],
-Cell[89760, 2136, 2707, 49, 375, "Output"]
-}, Open  ]]
+Cell[40758, 1017, 1369, 32, 69, "Input"],
+Cell[42130, 1051, 3379, 83, 108, "Input"],
+Cell[45512, 1136, 3567, 83, 107, "Input"],
+Cell[49082, 1221, 2628, 63, 107, "Input"],
+Cell[51713, 1286, 2566, 62, 88, "Input"],
+Cell[54282, 1350, 3729, 86, 107, "Input"],
+Cell[58014, 1438, 3748, 91, 120, "Input"],
+Cell[61765, 1531, 3757, 91, 128, "Input"],
+Cell[65525, 1624, 2040, 52, 71, "Input"]
 }
 ]
 *)

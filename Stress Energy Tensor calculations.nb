@@ -1,0 +1,2221 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     90985,       2213]
+NotebookOptionsPosition[     89060,       2149]
+NotebookOutlinePosition[     89408,       2164]
+CellTagsIndexPosition[     89365,       2161]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{
+  "\"\<GR package by Giovanni Formighieri (Universidade Federal de Santa \
+Catarina, 2015) -- \
+https://library.wolfram.com/infocenter/MathSource/8847/\>\"", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SetDirectory", "[", 
+     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], " ", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Get", "[", 
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", "\"\<GR_v2/Header.wl\>\"", "}"}], "]"}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"GetNotebookOrPackage", "[", "\"\<GR_v2/GR.wl\>\"", "]"}], 
+    ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.897060884738989*^9, 3.8970608874366913`*^9}, {
+   3.8970609315177827`*^9, 3.8970609379729476`*^9}, 3.8970609729460864`*^9, {
+   3.9219364311816645`*^9, 3.921936436292025*^9}, {3.9219364743516703`*^9, 
+   3.921936526564685*^9}, {3.9219366220532303`*^9, 3.92193663905908*^9}, {
+   3.921939403289508*^9, 3.921939407065421*^9}, {3.921939511409258*^9, 
+   3.9219395752083874`*^9}, {3.921939748201724*^9, 3.9219397987116003`*^9}}],
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{
+   StyleBox["\"\<set natural units\>\"",
+    FontWeight->"Bold"], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"speedOfLightInVacuum", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"gravitationalConstant", "=", "1"}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.8970611209008093`*^9, 3.8970611222350807`*^9}, {
+   3.897061267710512*^9, 3.8970613022202425`*^9}, {3.897062046597272*^9, 
+   3.8970620478791885`*^9}, {3.897144508297867*^9, 3.8971445091519794`*^9}, {
+   3.897144614296466*^9, 3.8971446185754595`*^9}, {3.8971447270313063`*^9, 
+   3.8971447278875985`*^9}, {3.897144800766918*^9, 3.897144801446893*^9}, 
+   3.8975846674802103`*^9, {3.9219367794822016`*^9, 3.9219367808822556`*^9}, {
+   3.921939591425521*^9, 3.921939607633257*^9}, {3.9219398019462748`*^9, 
+   3.9219398038890224`*^9}}],
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{
+   StyleBox[
+    "\"\<set post-collapse metric as the Nariai limit, and (-+) signature\>\"",
+    FontWeight->"Bold"], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"r_", ",", "rN_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "1"}], "/", 
+       RowBox[{"(", 
+        RowBox[{"3", "*", 
+         RowBox[{"rN", "^", "2"}], "*", "r"}], ")"}]}], "*", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"r", "-", "rN"}], ")"}], "^", "2"}], "*", 
+      RowBox[{"(", 
+       RowBox[{"r", "+", 
+        RowBox[{"2", "rN"}]}], ")"}]}]}], ";"}], 
+   StyleBox["\[IndentingNewLine]",
+    FontWeight->"Bold"], 
+   RowBox[{
+    RowBox[{"signature", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "1"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"coordinates", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "r"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"covMetricTensor", "=", 
+     RowBox[{"(", GridBox[{
+        {
+         RowBox[{"-", 
+          RowBox[{"f", "[", 
+           RowBox[{"r", ",", "rN"}], "]"}]}], "0"},
+        {"0", 
+         RowBox[{"1", "/", 
+          RowBox[{"f", "[", 
+           RowBox[{"r", ",", "rN"}], "]"}]}]}
+       }], ")"}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.897061667583016*^9, 3.8970616820128036`*^9}, {
+   3.8970711341684294`*^9, 3.8970711874018035`*^9}, 3.897584671148782*^9, {
+   3.897669053107273*^9, 3.897669089273362*^9}, {3.8986994040446234`*^9, 
+   3.8986994047573843`*^9}, {3.8986997391860685`*^9, 3.898699740153917*^9}, {
+   3.9049184127124023`*^9, 3.9049184146668396`*^9}, {3.92193983090432*^9, 
+   3.9219398747767253`*^9}, {3.9219400507037754`*^9, 3.9219400536966305`*^9}}],
+
+Cell[BoxData[{"\"\<Initialize GR package -- calculates Ricci scalar\>\"", "\
+\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Setup", "[", 
+   RowBox[{"coordinates", ",", "signature", ",", "covMetricTensor"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"R", "[", 
+    RowBox[{"r_", ",", "rN_"}], "]"}], "=", 
+   RowBox[{"Simplify", "[", "ricciScalar", "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.901126508956389*^9, 3.901126513300264*^9}, 
+   3.9219366984181395`*^9, {3.9219398848951435`*^9, 3.921939934022434*^9}, {
+   3.9219399733340597`*^9, 3.921940026743207*^9}}],
+
+Cell[BoxData[{"\"\<Define Heaviside step function at x=0\>\"", "\
+\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Unprotect", "[", "HeavisideTheta", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HeavisideTheta", "[", "0", "]"}], "=", "1"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Protect", "[", "HeavisideTheta", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.921939935162467*^9, 3.921939954047291*^9}}],
+
+Cell[BoxData[{"\"\<Define tortise coordinate for the Nariai limit. R0 is the \
+initial radial coordinate of the incoming matter shell (which had no effect \
+on results)\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"rstarabs", "[", 
+    RowBox[{"r_", ",", "rN_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"2", "/", "3"}], "*", "rN", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"r", "+", 
+            RowBox[{"2", "rN"}]}], ")"}], "/", 
+          RowBox[{"(", 
+           RowBox[{"r", "-", "rN"}], ")"}]}], ")"}], "^", "2"}], "]"}], 
+      "]"}]}], " ", "+", " ", 
+    RowBox[{
+     RowBox[{"rN", "^", "2"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"r", "-", "rN"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"R0star", "[", 
+   RowBox[{"R0_", ",", "rN_"}], "]"}], ":=", 
+  RowBox[{"rstarabs", "[", 
+   RowBox[{"R0", ",", "rN"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.9219371345902176`*^9, 3.9219371430502534`*^9}, {
+  3.9219400370068445`*^9, 3.921940112079153*^9}}],
+
+Cell[BoxData[{"\"\<define null coordinates\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u", "[", 
+   RowBox[{"r_", ",", "t_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{"t", "-", 
+   RowBox[{"rstarabs", "[", 
+    RowBox[{"r", ",", "rN"}], "]"}], "+", 
+   RowBox[{"R0star", "[", 
+    RowBox[{"R0", ",", "rN"}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v", "[", 
+   RowBox[{"r_", ",", "t_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{"t", "+", 
+   RowBox[{"rstarabs", "[", 
+    RowBox[{"r", ",", "rN"}], "]"}], "-", 
+   RowBox[{"R0star", "[", 
+    RowBox[{"R0", ",", "rN"}], 
+    "]"}]}]}], "\[IndentingNewLine]", "\"\<t(r,v) and u(r,v)\>\"", "\
+\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tofrv", "[", 
+   RowBox[{"r_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{"v", "-", 
+   RowBox[{"rstarabs", "[", 
+    RowBox[{"r", ",", "rN"}], "]"}], "+", 
+   RowBox[{"R0star", "[", 
+    RowBox[{"R0", ",", "rN"}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uofrv", "[", 
+   RowBox[{"r_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{"v", "-", 
+   RowBox[{"2", "*", 
+    RowBox[{"rstarabs", "[", 
+     RowBox[{"r", ",", "rN"}], "]"}]}], "+", 
+   RowBox[{"2", "*", 
+    RowBox[{"R0star", "[", 
+     RowBox[{"R0", ",", "rN"}], "]"}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.92193714763649*^9, 3.9219371497555046`*^9}, {
+  3.921940114896077*^9, 3.9219401196156907`*^9}, {3.921940455326153*^9, 
+  3.921940466038883*^9}}],
+
+Cell[BoxData[{"\"\<u(\!\(\*OverscriptBox[\(u\), \(_\)]\)), and its derivative\
+\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"uofubar", "[", 
+    RowBox[{"ub_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"(", 
+       RowBox[{"4", "/", "3"}], ")"}]}], "*", "rN", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{"3", "*", 
+           RowBox[{"rN", "/", "ub"}]}]}], ")"}], "^", "2"}], "]"}], "]"}]}], 
+    "+", 
+    RowBox[{"2", "*", 
+     RowBox[{
+      RowBox[{"rN", "^", "2"}], "/", "ub"}]}], " ", "+", " ", 
+    RowBox[{"2", "*", 
+     RowBox[{"R0star", "[", 
+      RowBox[{"R0", ",", "rN"}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dudubar", "[", 
+    RowBox[{"ub_", ",", "rN_", ",", "R0_"}], "]"}], "=", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"uofubar", "[", 
+      RowBox[{"ub", ",", "rN", ",", "R0"}], "]"}], ",", "ub"}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.921940131855491*^9, 3.921940152448206*^9}, {
+  3.921940225118046*^9, 3.921940282742445*^9}}],
+
+Cell[BoxData[{"\"\<r(u,v), where rgtrN is used for \
+r>\!\(\*SubscriptBox[\(r\), \(N\)]\), and is used for rltrN == \
+r<\!\(\*SubscriptBox[\(r\), \(N\)]\) (due to branch cut in the Lambert W \
+function)\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"rgtrN", "[", 
+    RowBox[{"u_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+   RowBox[{"rN", "*", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", "+", 
+       RowBox[{"2", "*", 
+        RowBox[{"LambertW", "[", 
+         RowBox[{
+          RowBox[{"1", "/", "2"}], "*", 
+          RowBox[{"Exp", "[", 
+           RowBox[{
+            RowBox[{"3", "*", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"1", "/", "2"}], "*", "v"}], "-", 
+                RowBox[{
+                 RowBox[{"1", "/", "2"}], "*", "u"}], "+", 
+                RowBox[{"R0star", "[", 
+                 RowBox[{"R0", ",", "rN"}], "]"}]}], ")"}], "/", 
+              RowBox[{"(", 
+               RowBox[{"2", "*", "rN"}], ")"}]}]}], "+", 
+            RowBox[{"1", "/", "2"}]}], "]"}]}], "]"}]}]}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", "*", 
+        RowBox[{"LambertW", "[", 
+         RowBox[{
+          RowBox[{"1", "/", "2"}], "*", 
+          RowBox[{"Exp", "[", 
+           RowBox[{
+            RowBox[{"3", "*", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"1", "/", "2"}], "*", "v"}], "-", 
+                RowBox[{
+                 RowBox[{"1", "/", "2"}], "*", "u"}], "+", 
+                RowBox[{"R0star", "[", 
+                 RowBox[{"R0", ",", "rN"}], "]"}]}], ")"}], "/", 
+              RowBox[{"(", 
+               RowBox[{"2", "*", "rN"}], ")"}]}]}], "+", 
+            RowBox[{"1", "/", "2"}]}], "]"}]}], "]"}]}], "-", "1"}], 
+      ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"rltrN", "[", 
+    RowBox[{"u_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+   RowBox[{"rN", "*", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", "+", 
+       RowBox[{"2", "*", 
+        RowBox[{"LambertW", "[", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "1"}], "/", "2"}], "*", 
+           RowBox[{"Exp", "[", 
+            RowBox[{
+             RowBox[{"3", "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"1", "/", "2"}], "*", "v"}], "-", 
+                 RowBox[{
+                  RowBox[{"1", "/", "2"}], "*", "u"}], "+", 
+                 RowBox[{"R0star", "[", 
+                  RowBox[{"R0", ",", "rN"}], "]"}]}], ")"}], "/", 
+               RowBox[{"(", 
+                RowBox[{"2", "*", "rN"}], ")"}]}]}], "+", 
+             RowBox[{"1", "/", "2"}]}], "]"}]}]}], "]"}]}]}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", "*", 
+        RowBox[{"LambertW", "[", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "1"}], "/", "2"}], "*", 
+           RowBox[{"Exp", "[", 
+            RowBox[{
+             RowBox[{"3", "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"1", "/", "2"}], "*", "v"}], "-", 
+                 RowBox[{
+                  RowBox[{"1", "/", "2"}], "*", "u"}], "+", 
+                 RowBox[{"R0star", "[", 
+                  RowBox[{"R0", ",", "rN"}], "]"}]}], ")"}], "/", 
+               RowBox[{"(", 
+                RowBox[{"2", "*", "rN"}], ")"}]}]}], "+", 
+             RowBox[{"1", "/", "2"}]}], "]"}]}]}], "]"}]}], "-", "1"}], 
+      ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", 
+   RowBox[{"u_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"rgtrN", "[", 
+     RowBox[{"u", ",", "v", ",", "rN", ",", "R0"}], "]"}], "*", 
+    RowBox[{"HeavisideTheta", "[", 
+     RowBox[{
+      RowBox[{"rgtrN", "[", 
+       RowBox[{"u", ",", "v", ",", "rN", ",", "R0"}], "]"}], "-", "rN"}], 
+     "]"}]}], "+", 
+   RowBox[{
+    RowBox[{"rltrN", "[", 
+     RowBox[{"u", ",", "v", ",", "rN", ",", "R0"}], "]"}], "*", 
+    RowBox[{"HeavisideTheta", "[", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"rltrN", "[", 
+        RowBox[{"u", ",", "v", ",", "rN", ",", "R0"}], "]"}]}], "+", "rN"}], 
+     "]"}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.9037107223513966`*^9, 3.9037107225485725`*^9}, {
+   3.903710775770901*^9, 3.9037108847337914`*^9}, {3.903711306068075*^9, 
+   3.903711365700793*^9}, {3.9037121440136905`*^9, 3.9037121485609856`*^9}, {
+   3.9037123828872976`*^9, 3.9037124202974243`*^9}, {3.903712491026801*^9, 
+   3.9037125076187277`*^9}, {3.903713839645708*^9, 3.9037138755941844`*^9}, {
+   3.9037139286840487`*^9, 3.903713930297408*^9}, 3.903714036108525*^9, {
+   3.9037141336354303`*^9, 3.903714187345279*^9}, 3.903714563644244*^9, {
+   3.903715407381279*^9, 3.9037154552422223`*^9}, {3.904145903698779*^9, 
+   3.9041459498090696`*^9}, {3.9041460046344624`*^9, 
+   3.9041460065624743`*^9}, {3.9041558260425825`*^9, 3.904155846968427*^9}, {
+   3.9043239260732336`*^9, 3.9043239273907957`*^9}, {3.9043242008929043`*^9, 
+   3.9043242087283745`*^9}, 3.9043264978617287`*^9, {3.904744898994172*^9, 
+   3.904744917293425*^9}, {3.9047449799676437`*^9, 3.9047449958854494`*^9}, {
+   3.904745287314415*^9, 3.904745303261811*^9}, {3.90474556084851*^9, 
+   3.9047456235461893`*^9}, {3.904746967839616*^9, 3.9047469863168883`*^9}, {
+   3.904750176593291*^9, 3.9047501935622644`*^9}, {3.9047535141436396`*^9, 
+   3.9047536157993917`*^9}, {3.904921144026291*^9, 3.9049211558517017`*^9}, {
+   3.904921221991542*^9, 3.904921231541588*^9}, {3.9067351101201363`*^9, 
+   3.9067351268540354`*^9}, {3.9067369097258596`*^9, 3.906736976677227*^9}, {
+   3.921937006603614*^9, 3.9219370430848722`*^9}, {3.9219370957111344`*^9, 
+   3.9219371019578323`*^9}, {3.921937136582041*^9, 3.9219371537171774`*^9}, {
+   3.921937252468066*^9, 3.9219372531774874`*^9}, {3.921940287007104*^9, 
+   3.921940415543024*^9}},
+ EmphasizeSyntaxErrors->True],
+
+Cell[BoxData[{"\"\<\!\(\*OverscriptBox[\(u\), \(_\)]\)(u) for \
+r>\!\(\*SubscriptBox[\(r\), \(N\)]\) and r<\!\(\*SubscriptBox[\(r\), \
+\(N\)]\), and its derivatives\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ubarofurgtrN", "[", 
+    RowBox[{"u_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+   RowBox[{"-", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"rgtrN", "[", 
+       RowBox[{"u", ",", "0", ",", "rN", ",", "R0"}], "]"}], "-", "rN"}], 
+     ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dubardurgtrN", "[", 
+    RowBox[{"u_", ",", "rN_", ",", "R0_"}], "]"}], "=", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"ubarofurgtrN", "[", 
+      RowBox[{"u", ",", "rN", ",", "R0"}], "]"}], ",", "u"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ubarofurltrN", "[", 
+    RowBox[{"u_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+   RowBox[{"-", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"rltrN", "[", 
+       RowBox[{"u", ",", "0", ",", "rN", ",", "R0"}], "]"}], "-", "rN"}], 
+     ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dubardurltrN", "[", 
+    RowBox[{"u_", ",", "rN_", ",", "R0_"}], "]"}], "=", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"ubarofurltrN", "[", 
+      RowBox[{"u", ",", "rN", ",", "R0"}], "]"}], ",", "u"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", "\"\<\!\(\*OverscriptBox[\(u\), \
+\(_\)]\)(r,t)for r>\!\(\*SubscriptBox[\(r\), \(N\)]\) and \
+r<\!\(\*SubscriptBox[\(r\), \(N\)]\)\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ubarofrrgtrN", "[", 
+   RowBox[{"r_", ",", "t_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{"ubarofurgtrN", "[", 
+   RowBox[{
+    RowBox[{"u", "[", 
+     RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+    "R0"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ubarofrrltrN", "[", 
+   RowBox[{"r_", ",", "t_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{"ubarofurltrN", "[", 
+   RowBox[{
+    RowBox[{"u", "[", 
+     RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+    "R0"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.9043239658261843`*^9, 3.904324080228787*^9}, {
+   3.9043241531137075`*^9, 3.90432415487527*^9}, {3.904324197485727*^9, 
+   3.904324212862774*^9}, {3.904324269750681*^9, 3.904324421508561*^9}, {
+   3.9043247899210014`*^9, 3.9043247920441303`*^9}, {3.9043251751199617`*^9, 
+   3.9043251949518747`*^9}, {3.904325231778551*^9, 3.904325263032226*^9}, {
+   3.9043253431063557`*^9, 3.904325349728828*^9}, {3.904325594915485*^9, 
+   3.904325602979566*^9}, {3.9043256572308245`*^9, 3.9043256712144146`*^9}, {
+   3.904325712350891*^9, 3.9043257125683956`*^9}, {3.904325788062131*^9, 
+   3.9043258437385674`*^9}, {3.9043262548298836`*^9, 3.90432627296727*^9}, 
+   3.904326334387596*^9, {3.904835034872467*^9, 3.9048350722968855`*^9}, {
+   3.904918656461726*^9, 3.9049186830134606`*^9}, {3.906735134468128*^9, 
+   3.906735142924774*^9}, {3.9219370561610413`*^9, 3.921937059898345*^9}, {
+   3.9219373123824387`*^9, 3.921937322817129*^9}, {3.921937380066775*^9, 
+   3.9219373834899683`*^9}, {3.921940418886731*^9, 3.9219404433180714`*^9}, {
+   3.921940488814605*^9, 3.9219405030245624`*^9}}],
+
+Cell[BoxData[{"\"\<Conformal factor C(\!\(\*OverscriptBox[\(u\), \
+\(_\)]\),\!\(\*OverscriptBox[\(v\), \(_\)]\)) (where \
+\!\(\*OverscriptBox[\(v\), \(_\)]\) = v) for  r<\!\(\*SubscriptBox[\(r\), \(N\
+\)]\) and r>\!\(\*SubscriptBox[\(r\), \(N\)]\)\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CrltrN", "[", 
+   RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{"Simplify", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{
+      RowBox[{"rltrN", "[", 
+       RowBox[{
+        RowBox[{"uofubar", "[", 
+         RowBox[{"ub", ",", "rN", ",", "R0"}], "]"}], ",", "v", ",", "rN", 
+        ",", "R0"}], "]"}], ",", "rN"}], "]"}], "*", 
+    RowBox[{"dudubar", "[", 
+     RowBox[{"ub", ",", "rN", ",", "R0"}], "]"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CrgtrN", "[", 
+   RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{"Simplify", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{
+      RowBox[{"rgtrN", "[", 
+       RowBox[{
+        RowBox[{"uofubar", "[", 
+         RowBox[{"ub", ",", "rN", ",", "R0"}], "]"}], ",", "v", ",", "rN", 
+        ",", "R0"}], "]"}], ",", "rN"}], "]"}], "*", 
+    RowBox[{"dudubar", "[", 
+     RowBox[{"ub", ",", "rN", ",", "R0"}], "]"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.9043241301658993`*^9, 3.904324189071241*^9}, {
+  3.904325852118137*^9, 3.9043259106204033`*^9}, {3.904753633833358*^9, 
+  3.904753701829857*^9}, {3.904755159428728*^9, 3.904755160312228*^9}, {
+  3.9047552368241796`*^9, 3.9047552402341905`*^9}, {3.9049176818437243`*^9, 
+  3.9049177048760877`*^9}, {3.904918233303791*^9, 3.904918240530064*^9}, {
+  3.904918281935938*^9, 3.904918312705872*^9}, {3.904918434962762*^9, 
+  3.904918443207402*^9}, {3.9052761418831234`*^9, 3.90527614754578*^9}, {
+  3.9052763089234686`*^9, 3.905276313776809*^9}, {3.9053563581303697`*^9, 
+  3.9053564568337684`*^9}, {3.9067351501582355`*^9, 3.9067351622453456`*^9}, {
+  3.92193741652677*^9, 3.921937416960535*^9}, {3.921940512615424*^9, 
+  3.921940597997577*^9}}],
+
+Cell[BoxData[{"\"\<\!\(\*SubscriptBox[\(T\), \
+\(\[Mu]\[Nu]\)]\)=\!\(\*SubscriptBox[\(\[Theta]\), \
+\(\[Mu]\[Nu]\)]\)+\!\(\*FractionBox[\(R\), \(48\\\ \
+\[Pi]\)]\)\!\(\*SubscriptBox[\(g\), \(\[Mu]\[Nu]\)]\)\>\"", "\
+\[IndentingNewLine]", "\"\<\!\(\*SubscriptBox[\(\[Theta]\), \
+\(\*OverscriptBox[\(u\), \(_\)] \*OverscriptBox[\(u\), \
+\(_\)]\)]\)=-\!\(\*FractionBox[SqrtBox[\(C \((\*OverscriptBox[\(u\), \(_\)], \
+\*OverscriptBox[\(v\), \(_\)])\)\)], \(12  \
+\[Pi]\)]\)\!\(\*FractionBox[SuperscriptBox[\(\[PartialD]\), \(2\)], \(\
+\[PartialD]\*SuperscriptBox[OverscriptBox[\(u\), \(_\)], \
+\(2\)]\)]\)[(C(\!\(\*OverscriptBox[\(u\), \(_\)]\),\!\(\*OverscriptBox[\(v\), \
+\(_\)]\))\!\(\*SuperscriptBox[\()\), \(\(-1\)/2\)]\)];   \
+\!\(\*SubscriptBox[\(\[Theta]\), \(\*OverscriptBox[\(v\), \(_\)] \
+\*OverscriptBox[\(v\), \(_\)]\)]\)=-\!\(\*FractionBox[SqrtBox[\(C \
+\((\*OverscriptBox[\(u\), \(_\)], \*OverscriptBox[\(v\), \(_\)])\)\)], \(12  \
+\[Pi]\)]\)\!\(\*FractionBox[SuperscriptBox[\(\[PartialD]\), \(2\)], \(\
+\[PartialD]\*SuperscriptBox[OverscriptBox[\(v\), \(_\)], \
+\(2\)]\)]\)[(C(\!\(\*OverscriptBox[\(u\), \(_\)]\),\!\(\*OverscriptBox[\(v\), \
+\(_\)]\))\!\(\*SuperscriptBox[\()\), \(\(-1\)/2\)]\)];  \!\(\*SubscriptBox[\(\
+\[Theta]\), \(\*OverscriptBox[\(u\), \(_\)] \*OverscriptBox[\(v\), \
+\(_\)]\)]\)=0\>\""}], "Input",
+ CellChangeTimes->{{3.92194064357933*^9, 3.921940793586896*^9}, {
+  3.9219408568736343`*^9, 3.9219410604518585`*^9}}],
+
+Cell[BoxData[{"\"\<Second derivatives of the conformal factor \
+C(\!\(\*OverscriptBox[\(u\), \(_\)]\),\!\(\*OverscriptBox[\(v\), \(_\)]\)) \
+for  r<\!\(\*SubscriptBox[\(r\), \(N\)]\) and r>\!\(\*SubscriptBox[\(r\), \(N\
+\)]\)\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ddinvsqrtCrltrNv", "[", 
+    RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], "=", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"1", "/", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"CrltrN", "[", 
+        RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], "]"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"v", ",", "2"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ddinvsqrtCrgtrNv", "[", 
+    RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], "=", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"1", "/", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"CrgtrN", "[", 
+        RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], "]"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"v", ",", "2"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ddinvsqrtCrltrNub", "[", 
+    RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], "=", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"1", "/", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"CrltrN", "[", 
+        RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], "]"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"ub", ",", "2"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ddinvsqrtCrgtrNub", "[", 
+    RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], "=", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"1", "/", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"CrgtrN", "[", 
+        RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], "]"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"ub", ",", "2"}], "}"}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.904324216003873*^9, {3.9043259169520493`*^9, 3.9043259339241076`*^9}, {
+   3.921940599550361*^9, 3.921940626725628*^9}, {3.9219410629245496`*^9, 
+   3.9219410650606356`*^9}}],
+
+Cell[BoxData[{"\"\<Non-zero components of \!\(\*SubscriptBox[\(T\), \(\[Mu]\
+\[Nu]\)]\), r<\!\(\*SubscriptBox[\(r\), \(N\)]\) and r>\!\(\*SubscriptBox[\(r\
+\), \(N\)]\)\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TvvrltrN", "[", 
+   RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"CrltrN", "[", 
+       RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], "]"}], "]"}]}], "/", 
+    RowBox[{"(", 
+     RowBox[{"12", "*", "Pi"}], ")"}]}], "*", 
+   RowBox[{"ddinvsqrtCrltrNv", "[", 
+    RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], 
+    "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TvvrgtrN", "[", 
+   RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"CrgtrN", "[", 
+       RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], "]"}], "]"}]}], "/", 
+    RowBox[{"(", 
+     RowBox[{"12", "*", "Pi"}], ")"}]}], "*", 
+   RowBox[{"ddinvsqrtCrgtrNv", "[", 
+    RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], 
+    "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TububrltrN", "[", 
+   RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"CrltrN", "[", 
+       RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], "]"}], "]"}]}], "/", 
+    RowBox[{"(", 
+     RowBox[{"12", "*", "Pi"}], ")"}]}], "*", 
+   RowBox[{"ddinvsqrtCrltrNub", "[", 
+    RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], 
+    "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TububrgtrN", "[", 
+   RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"CrgtrN", "[", 
+       RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], "]"}], "]"}]}], "/", 
+    RowBox[{"(", 
+     RowBox[{"12", "*", "Pi"}], ")"}]}], "*", 
+   RowBox[{"ddinvsqrtCrgtrNub", "[", 
+    RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], 
+    "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TubvrltrN", "[", 
+   RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"R", "[", 
+      RowBox[{
+       RowBox[{"rltrN", "[", 
+        RowBox[{
+         RowBox[{"uofubar", "[", 
+          RowBox[{"ub", ",", "rN", ",", "R0"}], "]"}], ",", "v", ",", "rN", 
+         ",", "R0"}], "]"}], ",", "rN"}], "]"}]}], "/", 
+    RowBox[{"(", 
+     RowBox[{"48", "*", "Pi"}], ")"}]}], "*", 
+   RowBox[{
+    RowBox[{"CrltrN", "[", 
+     RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], "]"}], "/", 
+    "2"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TubvrgtrN", "[", 
+   RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"R", "[", 
+      RowBox[{
+       RowBox[{"rgtrN", "[", 
+        RowBox[{
+         RowBox[{"uofubar", "[", 
+          RowBox[{"ub", ",", "rN", ",", "R0"}], "]"}], ",", "v", ",", "rN", 
+         ",", "R0"}], "]"}], ",", "rN"}], "]"}]}], "/", 
+    RowBox[{"(", 
+     RowBox[{"48", "*", "Pi"}], ")"}]}], "*", 
+   RowBox[{
+    RowBox[{"CrgtrN", "[", 
+     RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], "]"}], "/", 
+    "2"}]}]}], "\[IndentingNewLine]", "\"\<Transform RSET components to \
+un-barred coordinates. Since \!\(\*OverscriptBox[\(v\), \(_\)]\)=v, \
+\!\(\*SubscriptBox[\(T\), \(\*OverscriptBox[\(v\), \(_\)] \*OverscriptBox[\(v\
+\), \(_\)]\)]\)=\!\(\*SubscriptBox[\(T\), \(vv\)]\) so we dont need to find \
+\!\(\*SubscriptBox[\(T\), \(vv\)]\) from the components in the barred \
+coordinates\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TuurgtrN", "[", 
+   RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"TububrgtrN", "[", 
+    RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], "]"}], "*", 
+   RowBox[{"dubardurgtrN", "[", 
+    RowBox[{
+     RowBox[{"uofubar", "[", 
+      RowBox[{"ub", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", "R0"}], 
+    "]"}], "*", 
+   RowBox[{"dubardurgtrN", "[", 
+    RowBox[{
+     RowBox[{"uofubar", "[", 
+      RowBox[{"ub", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", "R0"}], 
+    "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TuurltrN", "[", 
+   RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"TububrltrN", "[", 
+    RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], "]"}], "*", 
+   RowBox[{"dubardurltrN", "[", 
+    RowBox[{
+     RowBox[{"uofubar", "[", 
+      RowBox[{"ub", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", "R0"}], 
+    "]"}], "*", 
+   RowBox[{"dubardurltrN", "[", 
+    RowBox[{
+     RowBox[{"uofubar", "[", 
+      RowBox[{"ub", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", "R0"}], 
+    "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TuvrgtrN", "[", 
+   RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"TubvrgtrN", "[", 
+    RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], "]"}], "*", 
+   RowBox[{"dubardurgtrN", "[", 
+    RowBox[{
+     RowBox[{"uofubar", "[", 
+      RowBox[{"ub", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", "R0"}], 
+    "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"TuvrltrN", "[", 
+    RowBox[{"ub_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"TubvrltrN", "[", 
+     RowBox[{"ub", ",", "v", ",", "rN", ",", "R0"}], "]"}], "*", 
+    RowBox[{"dubardurltrN", "[", 
+     RowBox[{
+      RowBox[{"uofubar", "[", 
+       RowBox[{"ub", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", "R0"}], 
+     "]"}]}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", "\"\<Combine the \
+r<\!\(\*SubscriptBox[\(r\), \(N\)]\) and r>\!\(\*SubscriptBox[\(r\), \(N\)]\) \
+parts of the stress energy tensor components into single expressions, and \
+express them as functions of (t,r) (intermediate step to expressing them as \
+functions of (r,v))\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Tububofrcombined", "[", 
+   RowBox[{"r_", ",", "t_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"TububrgtrN", "[", 
+     RowBox[{
+      RowBox[{"ubarofrrgtrN", "[", 
+       RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", 
+      RowBox[{"v", "[", 
+       RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+      "R0"}], "]"}], "*", 
+    RowBox[{"HeavisideTheta", "[", 
+     RowBox[{"r", "-", "rN"}], "]"}]}], "+", 
+   RowBox[{
+    RowBox[{"TububrltrN", "[", 
+     RowBox[{
+      RowBox[{"ubarofrrltrN", "[", 
+       RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", 
+      RowBox[{"v", "[", 
+       RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+      "R0"}], "]"}], "*", 
+    RowBox[{"HeavisideTheta", "[", 
+     RowBox[{
+      RowBox[{"-", "r"}], "+", "rN"}], "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Tvvofrcombined", "[", 
+   RowBox[{"r_", ",", "t_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Simplify", "[", 
+     RowBox[{"TvvrgtrN", "[", 
+      RowBox[{
+       RowBox[{"ubarofrrgtrN", "[", 
+        RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"v", "[", 
+        RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+       "R0"}], "]"}], "]"}], "*", 
+    RowBox[{"HeavisideTheta", "[", 
+     RowBox[{"r", "-", "rN"}], "]"}]}], "+", 
+   RowBox[{
+    RowBox[{"Simplify", "[", 
+     RowBox[{"TvvrltrN", "[", 
+      RowBox[{
+       RowBox[{"ubarofrrltrN", "[", 
+        RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"v", "[", 
+        RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+       "R0"}], "]"}], "]"}], "*", 
+    RowBox[{"HeavisideTheta", "[", 
+     RowBox[{
+      RowBox[{"-", "r"}], "+", "rN"}], "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Tubvofrcombined", "[", 
+   RowBox[{"r_", ",", "t_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"TubvrgtrN", "[", 
+     RowBox[{
+      RowBox[{"ubarofrrgtrN", "[", 
+       RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", 
+      RowBox[{"v", "[", 
+       RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+      "R0"}], "]"}], "*", 
+    RowBox[{"HeavisideTheta", "[", 
+     RowBox[{"r", "-", "rN"}], "]"}]}], "+", 
+   RowBox[{
+    RowBox[{"TubvrltrN", "[", 
+     RowBox[{
+      RowBox[{"ubarofrrltrN", "[", 
+       RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", 
+      RowBox[{"v", "[", 
+       RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+      "R0"}], "]"}], "*", 
+    RowBox[{"HeavisideTheta", "[", 
+     RowBox[{
+      RowBox[{"-", "r"}], "+", "rN"}], "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Tuuofrcombined", "[", 
+   RowBox[{"r_", ",", "t_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Simplify", "[", 
+     RowBox[{"TuurgtrN", "[", 
+      RowBox[{
+       RowBox[{"ubarofrrgtrN", "[", 
+        RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"v", "[", 
+        RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+       "R0"}], "]"}], "]"}], "*", 
+    RowBox[{"HeavisideTheta", "[", 
+     RowBox[{"r", "-", "rN"}], "]"}]}], "+", 
+   RowBox[{
+    RowBox[{"Simplify", "[", 
+     RowBox[{"TuurltrN", "[", 
+      RowBox[{
+       RowBox[{"ubarofrrltrN", "[", 
+        RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"v", "[", 
+        RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+       "R0"}], "]"}], "]"}], "*", 
+    RowBox[{"HeavisideTheta", "[", 
+     RowBox[{
+      RowBox[{"-", "r"}], "+", "rN"}], "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Tuvofrcombined", "[", 
+   RowBox[{"r_", ",", "t_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Simplify", "[", 
+     RowBox[{"TuvrgtrN", "[", 
+      RowBox[{
+       RowBox[{"ubarofrrgtrN", "[", 
+        RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"v", "[", 
+        RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+       "R0"}], "]"}], "]"}], "*", 
+    RowBox[{"HeavisideTheta", "[", 
+     RowBox[{"r", "-", "rN"}], "]"}]}], "+", 
+   RowBox[{
+    RowBox[{"Simplify", "[", 
+     RowBox[{"TuvrltrN", "[", 
+      RowBox[{
+       RowBox[{"ubarofrrltrN", "[", 
+        RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"v", "[", 
+        RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+       "R0"}], "]"}], "]"}], "*", 
+    RowBox[{"HeavisideTheta", "[", 
+     RowBox[{
+      RowBox[{"-", "r"}], "+", "rN"}], "]"}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.9043242337860126`*^9, 3.904324252508006*^9}, 
+   3.904324766314584*^9, {3.904325939390868*^9, 3.904325966034372*^9}, {
+   3.904326918498329*^9, 3.9043269913227673`*^9}, {3.904327159611306*^9, 
+   3.9043271757783813`*^9}, {3.9043274952653356`*^9, 
+   3.9043275404995775`*^9}, {3.904327629157855*^9, 3.9043277122756615`*^9}, {
+   3.904327771876745*^9, 3.904327824920779*^9}, {3.904328294937421*^9, 
+   3.90432829698052*^9}, {3.9043283438273935`*^9, 3.9043283738108644`*^9}, {
+   3.9043286213611193`*^9, 3.9043286852785387`*^9}, {3.904328727899482*^9, 
+   3.904328937359457*^9}, {3.904329008994529*^9, 3.9043290164869614`*^9}, {
+   3.904329825296299*^9, 3.9043298261698112`*^9}, {3.9047537567694263`*^9, 
+   3.904753793677955*^9}, {3.904753834202085*^9, 3.904753835951928*^9}, {
+   3.904753887369825*^9, 3.904753887584016*^9}, {3.9047539665905647`*^9, 
+   3.904754037161419*^9}, {3.9047547541637344`*^9, 3.9047549012094855`*^9}, {
+   3.904918945892437*^9, 3.9049189959308796`*^9}, {3.9049209177837048`*^9, 
+   3.9049209295896473`*^9}, {3.904920964826724*^9, 3.904920965979041*^9}, {
+   3.904921007962356*^9, 3.9049210634034944`*^9}, 3.9049211245349207`*^9, {
+   3.904921280896209*^9, 3.9049212994931602`*^9}, {3.90492141401902*^9, 
+   3.9049214310037565`*^9}, {3.905356981193429*^9, 3.90535698178496*^9}, {
+   3.9053576344026947`*^9, 3.905357681027831*^9}, {3.9053577170910234`*^9, 
+   3.9053577281107807`*^9}, 3.9053579232142563`*^9, {3.9054433942973022`*^9, 
+   3.905443395427627*^9}, {3.9054438690850725`*^9, 3.9054438692549486`*^9}, {
+   3.905528782876219*^9, 3.905528783444499*^9}, {3.9055290456890087`*^9, 
+   3.9055290464807568`*^9}, {3.9059547565324783`*^9, 3.905954779277708*^9}, {
+   3.9067351686493883`*^9, 3.9067351972968984`*^9}, {3.906736525190555*^9, 
+   3.9067365851656375`*^9}, {3.9067367429286375`*^9, 
+   3.9067367506603985`*^9}, {3.90673759001083*^9, 3.9067375902814293`*^9}, 
+   3.9219374485153646`*^9, {3.9219375150693965`*^9, 3.9219375293649244`*^9}, {
+   3.9219410886660085`*^9, 3.921941315736827*^9}, {3.9219413506045*^9, 
+   3.921941380503914*^9}, 3.9219414164942503`*^9, {3.9219414651986103`*^9, 
+   3.921941490025549*^9}}],
+
+Cell[BoxData[{"\"\<Express un-barred SET components as functions of \
+(r,v)\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Tuuofrv", "[", 
+    RowBox[{"r_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+   RowBox[{"Tuuofrcombined", "[", 
+    RowBox[{"r", ",", 
+     RowBox[{"tofrv", "[", 
+      RowBox[{"r", ",", "v", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+     "R0"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Tvvofrv", "[", 
+    RowBox[{"r_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+   RowBox[{"Tvvofrcombined", "[", 
+    RowBox[{"r", ",", 
+     RowBox[{"tofrv", "[", 
+      RowBox[{"r", ",", "v", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+     "R0"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Tuvofrv", "[", 
+    RowBox[{"r_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+   RowBox[{"Tuvofrcombined", "[", 
+    RowBox[{"r", ",", 
+     RowBox[{"tofrv", "[", 
+      RowBox[{"r", ",", "v", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+     "R0"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.92194143836936*^9, 3.9219414454818583`*^9}, {
+  3.9219414942818584`*^9, 3.9219415068105826`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"\"\<Calculate energy density \!\(\*SuperscriptBox[\(T\), \
+\(tt\)]\)\>\"", ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Tttofr", "[", 
+   RowBox[{"r_", ",", "t_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Tuuofrcombined", "[", 
+    RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], "+", " ", 
+   RowBox[{"Tvvofrcombined", "[", 
+    RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], "+", " ", 
+   RowBox[{"2", "*", 
+    RowBox[{"Tuvofrcombined", "[", 
+     RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Tupttofr", "[", 
+   RowBox[{"r_", ",", "t_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Tttofr", "[", 
+    RowBox[{"r", ",", "t", ",", "rN", ",", "R0"}], "]"}], "/", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"r", ",", "rN"}], "]"}], "*", 
+     RowBox[{"f", "[", 
+      RowBox[{"r", ",", "rN"}], "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Tupttofrv", "[", 
+   RowBox[{"r_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{"Tupttofr", "[", 
+   RowBox[{"r", ",", 
+    RowBox[{"tofrv", "[", 
+     RowBox[{"r", ",", "v", ",", "rN", ",", "R0"}], "]"}], ",", "rN", ",", 
+    "R0"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.9219415152177095`*^9, 3.9219415160599847`*^9}, {
+   3.9219415932256517`*^9, 3.921941666169057*^9}, 3.921941780287972*^9}],
+
+Cell[BoxData["\<\"Calculate energy density \\!\\(\\*SuperscriptBox[\\(T\\), \
+\\(tt\\)]\\)\"\>"], "Output",
+ CellChangeTimes->{3.9219416723120527`*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vconstGeodesicEnDen", "[", 
+   RowBox[{"r_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Tuuofrv", "[", 
+    RowBox[{"r", ",", "v", ",", "rN", ",", "R0"}], "]"}], "/", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"r", ",", "rN"}], "]"}], "*", 
+     RowBox[{"f", "[", 
+      RowBox[{"r", ",", "rN"}], "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uconstGeodesicEnDen", "[", 
+   RowBox[{"r_", ",", "v_", ",", "rN_", ",", "R0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Tvvofrv", "[", 
+    RowBox[{"r", ",", "v", ",", "rN", ",", "R0"}], "]"}], "/", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"r", ",", "rN"}], "]"}], "*", 
+     RowBox[{"f", "[", 
+      RowBox[{"r", ",", "rN"}], "]"}]}], ")"}]}]}]}], "Input",
+ CellChangeTimes->{{3.90673559340315*^9, 3.906735594858549*^9}, {
+  3.907936801457821*^9, 3.90793681865744*^9}, {3.9079368758115244`*^9, 
+  3.907936889474247*^9}, {3.9079369258409443`*^9, 3.907936949913458*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Tuuofrv", "[", 
+        RowBox[{"r", ",", "v", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"Tvvofrv", "[", 
+        RowBox[{"r", ",", "v", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"Tuvofrv", "[", 
+        RowBox[{"r", ",", "v", ",", "rN", ",", "R0"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", "0", ",", "10"}], "}"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<r\>\"", ",", 
+        "\"\<\!\(\*SubscriptBox[\(T\), \(\[Mu]\[Nu]\)]\)\>\""}], "}"}]}], ",", 
+     RowBox[{"ExclusionsStyle", "\[Rule]", "Dashed"}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "50"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"AspectRatio", "\[Rule]", 
+      RowBox[{"1", "/", "GoldenRatio"}]}], ",", 
+     RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"LineLegend", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Directive", "[", 
+           RowBox[{"Blue", ",", "Dashed", ",", "Thick"}], "]"}], ",", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"Red", ",", "Dotted", ",", "Thick"}], "]"}], ",", 
+          RowBox[{"Directive", "[", 
+           RowBox[{
+            RowBox[{"Darker", "[", "Green", "]"}], ",", "DotDashed", ",", 
+            "Thick"}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<\!\(\*SubscriptBox[\(T\), \(uu\)]\)\>\"", ",", 
+          "\"\<\!\(\*SubscriptBox[\(T\), \(vv\)]\)\>\"", ",", 
+          "\"\<\!\(\*SubscriptBox[\(T\), \(uv\)]\)\>\""}], "}"}]}], "]"}]}], 
+     ",", 
+     RowBox[{"LabelStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Bold", ",", " ", "20"}], "]"}]}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Directive", "[", 
+         RowBox[{"Blue", ",", "Dashed", ",", "Thick"}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{"Red", ",", "Dotted", ",", "Thick"}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Darker", "[", "Green", "]"}], ",", "DotDashed", ",", 
+          "Thick"}], "]"}]}], "}"}]}], ",", 
+     RowBox[{"AxesStyle", "\[Rule]", "Thick"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"v", ",", "0.0", ",", "\"\<v\>\""}], "}"}], ",", "0", ",", "10",
+      ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rN", ",", "2", ",", "\"\<rN\>\""}], "}"}], ",", "0", ",", "10",
+      ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"R0", ",", "0.0", ",", "\"\<R0\>\""}], "}"}], ",", "0", ",", 
+     "10", ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 
+    2, $CellContext`v$$ = 0., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`v$$], 0., "v"}, 0, 10}, {{
+       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
+       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}}, Typeset`size$$ = {
+    460., {102., 107.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`v$4922$$ = 
+    0, $CellContext`rN$4923$$ = 0, $CellContext`R0$4924$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 
+        2, $CellContext`v$$ = 0.}, "ControllerVariables" :> {
+        Hold[$CellContext`v$$, $CellContext`v$4922$$, 0], 
+        Hold[$CellContext`rN$$, $CellContext`rN$4923$$, 0], 
+        Hold[$CellContext`R0$$, $CellContext`R0$4924$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`Tuuofrv[$CellContext`r, $CellContext`v$$, \
+$CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`Tvvofrv[$CellContext`r, $CellContext`v$$, \
+$CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`Tuvofrv[$CellContext`r, $CellContext`v$$, \
+$CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 10}, 
+        AxesLabel -> {"r", "\!\(\*SubscriptBox[\(T\), \(\[Mu]\[Nu]\)]\)"}, 
+        ExclusionsStyle -> Dashed, PlotPoints -> 50, PlotRange -> Automatic, 
+        AspectRatio -> 1/GoldenRatio, GridLines -> Automatic, PlotLegends -> 
+        LineLegend[{
+           Directive[Blue, Dashed, Thick], 
+           Directive[Red, Dotted, Thick], 
+           Directive[
+            Darker[Green], DotDashed, Thick]}, {
+          "\!\(\*SubscriptBox[\(T\), \(uu\)]\)", 
+           "\!\(\*SubscriptBox[\(T\), \(vv\)]\)", 
+           "\!\(\*SubscriptBox[\(T\), \(uv\)]\)"}], LabelStyle -> 
+        Directive[Bold, 20], PlotStyle -> {
+          Directive[Blue, Dashed, Thick], 
+          Directive[Red, Dotted, Thick], 
+          Directive[
+           Darker[Green], DotDashed, Thick]}, AxesStyle -> Thick], 
+      "Specifications" :> {{{$CellContext`v$$, 0., "v"}, 0, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`rN$$, 2, "rN"}, 0, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, Appearance -> 
+         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{511., {177., 183.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.921937759985219*^9, 3.921939157963173*^9, 
+  3.9219397305263896`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Tuuofrv", "[", 
+        RowBox[{"r", ",", "0.01", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"Tuuofrv", "[", 
+        RowBox[{"r", ",", "5.", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"Tuuofrv", "[", 
+        RowBox[{"r", ",", "10.", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"Tuuofrv", "[", 
+        RowBox[{"r", ",", "20.", ",", "rN", ",", "R0"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", "0", ",", "10"}], "}"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<r\>\"", ",", "\"\<\!\(\*SubscriptBox[\(T\), \(uu\)]\)\>\""}], 
+       "}"}]}], ",", 
+     RowBox[{"ExclusionsStyle", "\[Rule]", "Dashed"}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "50"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"AspectRatio", "\[Rule]", 
+      RowBox[{"1", "/", "GoldenRatio"}]}], ",", 
+     RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"LabelStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Bold", ",", " ", "20"}], "]"}]}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Directive", "[", 
+         RowBox[{"Black", ",", " ", "Thick"}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{"Blue", ",", "Dashed", ",", " ", "Thick"}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{"Red", ",", "Dotted", ",", " ", "Thick"}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Darker", "[", "Green", "]"}], ",", "DotDashed", ",", " ", 
+          "Thick"}], "]"}]}], "}"}]}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"LineLegend", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Directive", "[", 
+           RowBox[{"Black", ",", "Thick"}], "]"}], ",", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"Blue", ",", "Dashed", ",", "Thick"}], "]"}], ",", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"Red", ",", "Dotted", ",", "Thick"}], "]"}], ",", 
+          RowBox[{"Directive", "[", 
+           RowBox[{
+            RowBox[{"Darker", "[", "Green", "]"}], ",", "DotDashed", ",", 
+            "Thick"}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<v=0.01\>\"", ",", "\"\<v=5\>\"", ",", "\"\<v=10\>\"", ",", 
+          "\"\<v=20\>\""}], "}"}]}], "]"}]}], ",", 
+     RowBox[{"AxesStyle", "\[Rule]", "Thick"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rN", ",", "2", ",", "\"\<rN\>\""}], "}"}], ",", "0", ",", "10",
+      ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"R0", ",", "0.0", ",", "\"\<R0\>\""}], "}"}], ",", "0", ",", 
+     "10", ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9219379305207777`*^9, 3.921937930663327*^9}, 
+   3.921938563750785*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 2, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
+       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}}, Typeset`size$$ = {
+    491., {110., 115.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`rN$2733$$ = 
+    0, $CellContext`R0$2734$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 2}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`rN$$, $CellContext`rN$2733$$, 0], 
+        Hold[$CellContext`R0$$, $CellContext`R0$2734$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`Tuuofrv[$CellContext`r, 
+          0.01, $CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`Tuuofrv[$CellContext`r, 
+          5., $CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`Tuuofrv[$CellContext`r, 
+          10., $CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`Tuuofrv[$CellContext`r, 
+          20., $CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 
+         10}, AxesLabel -> {"r", "\!\(\*SubscriptBox[\(T\), \(uu\)]\)"}, 
+        ExclusionsStyle -> Dashed, PlotPoints -> 50, PlotRange -> Automatic, 
+        AspectRatio -> 1/GoldenRatio, GridLines -> Automatic, LabelStyle -> 
+        Directive[Bold, 20], PlotStyle -> {
+          Directive[Black, Thick], 
+          Directive[Blue, Dashed, Thick], 
+          Directive[Red, Dotted, Thick], 
+          Directive[
+           Darker[Green], DotDashed, Thick]}, PlotLegends -> LineLegend[{
+           Directive[Black, Thick], 
+           Directive[Blue, Dashed, Thick], 
+           Directive[Red, Dotted, Thick], 
+           Directive[
+            Darker[Green], DotDashed, Thick]}, {
+          "v=0.01", "v=5", "v=10", "v=20"}], AxesStyle -> Thick], 
+      "Specifications" :> {{{$CellContext`rN$$, 2, "rN"}, 0, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, Appearance -> 
+         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{542., {171., 177.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.921937912591973*^9, 3.921937940433686*^9}, 
+   3.9219385791319494`*^9, 3.9219391595377655`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"Plot", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Tvvofrv", "[", 
+         RowBox[{"r", ",", "0.", ",", "rN", ",", "R0"}], "]"}], ",", 
+        RowBox[{"Tvvofrv", "[", 
+         RowBox[{"r", ",", "5.", ",", "rN", ",", "R0"}], "]"}], ",", 
+        RowBox[{"Tvvofrv", "[", 
+         RowBox[{"r", ",", "10.", ",", "rN", ",", "R0"}], "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"r", ",", "0", ",", "10"}], "}"}], ",", 
+      RowBox[{"AxesLabel", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<r\>\"", ",", "\"\<\!\(\*SubscriptBox[\(T\), \(vv\)]\)\>\""}], 
+        "}"}]}], ",", 
+      RowBox[{"ExclusionsStyle", "\[Rule]", "Dashed"}], ",", 
+      RowBox[{"PlotPoints", "\[Rule]", "50"}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", "Automatic"}], ",", 
+      RowBox[{"AspectRatio", "\[Rule]", 
+       RowBox[{"1", "/", "GoldenRatio"}]}], ",", 
+      RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", 
+      RowBox[{"LabelStyle", "\[Rule]", 
+       RowBox[{"Directive", "[", 
+        RowBox[{"Bold", ",", " ", "20"}], "]"}]}], ",", 
+      RowBox[{"PlotStyle", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Directive", "[", "Blue", "]"}], ",", 
+         RowBox[{"Directive", "[", 
+          RowBox[{"Red", ",", "Dashed"}], "]"}], ",", 
+         RowBox[{"Directive", "[", 
+          RowBox[{
+           RowBox[{"Darker", "[", "Green", "]"}], ",", 
+           RowBox[{"Dashing", "\[Rule]", "0.01"}]}], "]"}]}], "}"}]}], ",", 
+      RowBox[{"PlotLegends", "\[Rule]", 
+       RowBox[{"LineLegend", "[", 
+        RowBox[{"{", 
+         RowBox[{"\"\<v=0\>\"", ",", "\"\<v=5\>\"", ",", "\"\<v=10\>\""}], 
+         "}"}], "]"}]}], ",", 
+      RowBox[{"AxesStyle", "\[Rule]", "Thick"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"rN", ",", "2", ",", "\"\<rN\>\""}], "}"}], ",", "0", ",", 
+      "10", ",", 
+      RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"R0", ",", "0.0", ",", "\"\<R0\>\""}], "}"}], ",", "0", ",", 
+      "10", ",", 
+      RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.921938319217328*^9, 3.921938319752884*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 2, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
+       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}}, Typeset`size$$ = {
+    474., {97., 102.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`rN$2853$$ = 
+    0, $CellContext`R0$2854$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 2}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`rN$$, $CellContext`rN$2853$$, 0], 
+        Hold[$CellContext`R0$$, $CellContext`R0$2854$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`Tvvofrv[$CellContext`r, 
+          0., $CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`Tvvofrv[$CellContext`r, 
+          5., $CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`Tvvofrv[$CellContext`r, 
+          10., $CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 
+         10}, AxesLabel -> {"r", "\!\(\*SubscriptBox[\(T\), \(vv\)]\)"}, 
+        ExclusionsStyle -> Dashed, PlotPoints -> 50, PlotRange -> Automatic, 
+        AspectRatio -> 1/GoldenRatio, GridLines -> Automatic, LabelStyle -> 
+        Directive[Bold, 20], PlotStyle -> {
+          Directive[Blue], 
+          Directive[Red, Dashed], 
+          Directive[
+           Darker[Green], Dashing -> 0.01]}, PlotLegends -> 
+        LineLegend[{"v=0", "v=5", "v=10"}], AxesStyle -> Thick], 
+      "Specifications" :> {{{$CellContext`rN$$, 2, "rN"}, 0, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, Appearance -> 
+         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{525., {158., 164.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.9219383228393087`*^9, 3.921939165776231*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Tuvofrv", "[", 
+        RowBox[{"r", ",", "0.0", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"Tuvofrv", "[", 
+        RowBox[{"r", ",", "5.", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"Tuvofrv", "[", 
+        RowBox[{"r", ",", "10.", ",", "rN", ",", "R0"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", "0", ",", "10"}], "}"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<r\>\"", ",", "\"\<\!\(\*SubscriptBox[\(T\), \(uv\)]\)\>\""}], 
+       "}"}]}], ",", 
+     RowBox[{"ExclusionsStyle", "\[Rule]", "Dashed"}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "50"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"AspectRatio", "\[Rule]", 
+      RowBox[{"1", "/", "GoldenRatio"}]}], ",", 
+     RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"LabelStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Bold", ",", " ", "20"}], "]"}]}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Directive", "[", "Blue", "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{"Red", ",", "Dashed"}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Darker", "[", "Green", "]"}], ",", 
+          RowBox[{"Dashing", "\[Rule]", "0.01"}]}], "]"}]}], "}"}]}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"LineLegend", "[", 
+       RowBox[{"{", 
+        RowBox[{"\"\<v=0\>\"", ",", "\"\<v=5\>\"", ",", "\"\<v=10\>\""}], 
+        "}"}], "]"}]}], ",", 
+     RowBox[{"AxesStyle", "\[Rule]", "Thick"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rN", ",", "2", ",", "\"\<rN\>\""}], "}"}], ",", "0", ",", "10",
+      ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"R0", ",", "0.0", ",", "\"\<R0\>\""}], "}"}], ",", "0", ",", 
+     "10", ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 2, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
+       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}}, Typeset`size$$ = {
+    474., {113., 118.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`rN$2961$$ = 
+    0, $CellContext`R0$2962$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 2}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`rN$$, $CellContext`rN$2961$$, 0], 
+        Hold[$CellContext`R0$$, $CellContext`R0$2962$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`Tuvofrv[$CellContext`r, 
+          0., $CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`Tuvofrv[$CellContext`r, 
+          5., $CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`Tuvofrv[$CellContext`r, 
+          10., $CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 
+         10}, AxesLabel -> {"r", "\!\(\*SubscriptBox[\(T\), \(uv\)]\)"}, 
+        ExclusionsStyle -> Dashed, PlotPoints -> 50, PlotRange -> Automatic, 
+        AspectRatio -> 1/GoldenRatio, GridLines -> Automatic, LabelStyle -> 
+        Directive[Bold, 20], PlotStyle -> {
+          Directive[Blue], 
+          Directive[Red, Dashed], 
+          Directive[
+           Darker[Green], Dashing -> 0.01]}, PlotLegends -> 
+        LineLegend[{"v=0", "v=5", "v=10"}], AxesStyle -> Thick], 
+      "Specifications" :> {{{$CellContext`rN$$, 2, "rN"}, 0, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, Appearance -> 
+         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{525., {174., 180.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.921938611440632*^9, 3.9219391673196974`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Tvvofrv", "[", 
+        RowBox[{"r", ",", "1.", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"Tuuofrv", "[", 
+        RowBox[{"r", ",", "0.01", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"Tuuofrv", "[", 
+        RowBox[{"r", ",", "0.05", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"Tuuofrv", "[", 
+        RowBox[{"r", ",", "0.5", ",", "rN", ",", "R0"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", "0", ",", 
+       RowBox[{"1.1", "*", "rN"}]}], "}"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<r\>\"", ",", "\"\<\!\(\*SubscriptBox[\(T\), \(uu\)]\)\>\""}], 
+       "}"}]}], ",", 
+     RowBox[{"ExclusionsStyle", "\[Rule]", "Dashed"}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "50"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"AspectRatio", "\[Rule]", 
+      RowBox[{"1", "/", "GoldenRatio"}]}], ",", 
+     RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"LabelStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Bold", ",", " ", "20"}], "]"}]}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Directive", "[", 
+         RowBox[{"Black", ",", " ", "Thick"}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{"Blue", ",", "Dashed", ",", " ", "Thick"}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{"Red", ",", "Dotted", ",", " ", "Thick"}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Darker", "[", "Green", "]"}], ",", "DotDashed", ",", " ", 
+          "Thick"}], "]"}]}], "}"}]}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"LineLegend", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Directive", "[", 
+           RowBox[{"Black", ",", "Thick"}], "]"}], ",", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"Blue", ",", "Dashed", ",", "Thick"}], "]"}], ",", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"Red", ",", "Dotted", ",", "Thick"}], "]"}], ",", 
+          RowBox[{"Directive", "[", 
+           RowBox[{
+            RowBox[{"Darker", "[", "Green", "]"}], ",", "DotDashed", ",", 
+            "Thick"}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<\!\(\*SubscriptBox[\(T\), \(vv\)]\)\>\"", ",", 
+          "\"\<\!\(\*SubscriptBox[\(T\), \(uu\)]\), v=0.01\>\"", ",", 
+          "\"\<\!\(\*SubscriptBox[\(T\), \(uu\)]\), v=0.05\>\"", ",", 
+          "\"\<\!\(\*SubscriptBox[\(T\), \(uu\)]\), v=0.5\>\""}], "}"}]}], 
+       "]"}]}], ",", 
+     RowBox[{"AxesStyle", "\[Rule]", "Thick"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rN", ",", "2", ",", "\"\<rN\>\""}], "}"}], ",", "0", ",", "10",
+      ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"R0", ",", "0.0", ",", "\"\<R0\>\""}], "}"}], ",", "0", ",", 
+     "10", ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9219381939346313`*^9, 3.921938194077993*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 2, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
+       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}}, Typeset`size$$ = {
+    534., {120., 124.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`rN$3069$$ = 
+    0, $CellContext`R0$3070$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 2}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`rN$$, $CellContext`rN$3069$$, 0], 
+        Hold[$CellContext`R0$$, $CellContext`R0$3070$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`Tvvofrv[$CellContext`r, 
+          1., $CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`Tuuofrv[$CellContext`r, 
+          0.01, $CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`Tuuofrv[$CellContext`r, 
+          0.05, $CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`Tuuofrv[$CellContext`r, 
+          0.5, $CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 
+         1.1 $CellContext`rN$$}, 
+        AxesLabel -> {"r", "\!\(\*SubscriptBox[\(T\), \(uu\)]\)"}, 
+        ExclusionsStyle -> Dashed, PlotPoints -> 50, PlotRange -> Automatic, 
+        AspectRatio -> 1/GoldenRatio, GridLines -> Automatic, LabelStyle -> 
+        Directive[Bold, 20], PlotStyle -> {
+          Directive[Black, Thick], 
+          Directive[Blue, Dashed, Thick], 
+          Directive[Red, Dotted, Thick], 
+          Directive[
+           Darker[Green], DotDashed, Thick]}, PlotLegends -> LineLegend[{
+           Directive[Black, Thick], 
+           Directive[Blue, Dashed, Thick], 
+           Directive[Red, Dotted, Thick], 
+           Directive[
+            Darker[Green], DotDashed, Thick]}, {
+          "\!\(\*SubscriptBox[\(T\), \(vv\)]\)", 
+           "\!\(\*SubscriptBox[\(T\), \(uu\)]\), v=0.01", 
+           "\!\(\*SubscriptBox[\(T\), \(uu\)]\), v=0.05", 
+           "\!\(\*SubscriptBox[\(T\), \(uu\)]\), v=0.5"}], AxesStyle -> 
+        Thick], "Specifications" :> {{{$CellContext`rN$$, 2, "rN"}, 0, 10, 
+         Appearance -> "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, 
+         Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{585., {180., 186.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.9219381157249603`*^9, 3.9219382141839914`*^9, 
+  3.921939168449392*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Tupttofr", "[", 
+        RowBox[{"r", ",", 
+         RowBox[{"tofrv", "[", 
+          RowBox[{"r", ",", "0.", ",", "rN", ",", "R0"}], "]"}], ",", "rN", 
+         ",", "R0"}], "]"}], ",", 
+       RowBox[{"Tupttofr", "[", 
+        RowBox[{"r", ",", 
+         RowBox[{"tofrv", "[", 
+          RowBox[{"r", ",", "10.", ",", "rN", ",", "R0"}], "]"}], ",", "rN", 
+         ",", "R0"}], "]"}], ",", 
+       RowBox[{"Tupttofr", "[", 
+        RowBox[{"r", ",", 
+         RowBox[{"tofrv", "[", 
+          RowBox[{"r", ",", "20.", ",", "rN", ",", "R0"}], "]"}], ",", "rN", 
+         ",", "R0"}], "]"}], ",", 
+       RowBox[{"Tupttofrv", "[", 
+        RowBox[{"r", ",", "40.", ",", "rN", ",", "R0"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", "0", ",", "4"}], "}"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<r\>\"", ",", "\"\<\!\(\*SuperscriptBox[\(T\), \(tt\)]\)\>\""}], 
+       "}"}]}], ",", 
+     RowBox[{"ExclusionsStyle", "\[Rule]", "Dashed"}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "50"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "4"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "0.1"}], ",", "3"}], "}"}]}], "}"}]}], ",", 
+     RowBox[{"AspectRatio", "\[Rule]", 
+      RowBox[{"1", "/", "GoldenRatio"}]}], ",", 
+     RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"LabelStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Bold", ",", " ", "20"}], "]"}]}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Directive", "[", 
+         RowBox[{"Black", ",", "Thick"}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{"Blue", ",", "Dashed", ",", "Thick"}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{"Red", ",", "Dotted", ",", "Thick"}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Darker", "[", "Green", "]"}], ",", "DotDashed", ",", 
+          "Thick"}], "]"}]}], "}"}]}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"LineLegend", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Directive", "[", 
+           RowBox[{"Black", ",", "Thick"}], "]"}], ",", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"Blue", ",", "Dashed", ",", "Thick"}], "]"}], ",", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"Red", ",", "Dotted", ",", "Thick"}], "]"}], ",", 
+          RowBox[{"Directive", "[", 
+           RowBox[{
+            RowBox[{"Darker", "[", "Green", "]"}], ",", "DotDashed", ",", 
+            "Thick"}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<v=0\>\"", ",", "\"\<v=10\>\"", ",", "\"\<v=20\>\"", ",", 
+          "\"\<v=40\>\""}], "}"}]}], "]"}]}], ",", 
+     RowBox[{"AxesStyle", "\[Rule]", "Thick"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rN", ",", "2", ",", "\"\<rN\>\""}], "}"}], ",", "0", ",", "10",
+      ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"R0", ",", "0.0", ",", "\"\<R0\>\""}], "}"}], ",", "0", ",", 
+     "10", ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.921941699409378*^9, 3.9219417033837624`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 2, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
+       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}}, Typeset`size$$ = {
+    474., {120., 124.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`rN$8013$$ = 
+    0, $CellContext`R0$8014$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 2}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`rN$$, $CellContext`rN$8013$$, 0], 
+        Hold[$CellContext`R0$$, $CellContext`R0$8014$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`Tupttofr[$CellContext`r, 
+          $CellContext`tofrv[$CellContext`r, 
+           0., $CellContext`rN$$, $CellContext`R0$$], $CellContext`rN$$, \
+$CellContext`R0$$], 
+         $CellContext`Tupttofr[$CellContext`r, 
+          $CellContext`tofrv[$CellContext`r, 
+           10., $CellContext`rN$$, $CellContext`R0$$], $CellContext`rN$$, \
+$CellContext`R0$$], 
+         $CellContext`Tupttofr[$CellContext`r, 
+          $CellContext`tofrv[$CellContext`r, 
+           20., $CellContext`rN$$, $CellContext`R0$$], $CellContext`rN$$, \
+$CellContext`R0$$], 
+         $CellContext`Tupttofrv[$CellContext`r, 
+          40., $CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 4},
+         AxesLabel -> {"r", "\!\(\*SuperscriptBox[\(T\), \(tt\)]\)"}, 
+        ExclusionsStyle -> Dashed, PlotPoints -> 50, 
+        PlotRange -> {{0, 4}, {-0.1, 3}}, AspectRatio -> 1/GoldenRatio, 
+        GridLines -> Automatic, LabelStyle -> Directive[Bold, 20], PlotStyle -> {
+          Directive[Black, Thick], 
+          Directive[Blue, Dashed, Thick], 
+          Directive[Red, Dotted, Thick], 
+          Directive[
+           Darker[Green], DotDashed, Thick]}, PlotLegends -> LineLegend[{
+           Directive[Black, Thick], 
+           Directive[Blue, Dashed, Thick], 
+           Directive[Red, Dotted, Thick], 
+           Directive[
+            Darker[Green], DotDashed, Thick]}, {
+          "v=0", "v=10", "v=20", "v=40"}], AxesStyle -> Thick], 
+      "Specifications" :> {{{$CellContext`rN$$, 2, "rN"}, 0, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, Appearance -> 
+         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{525., {180., 186.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.921939175931853*^9, 3.921941804272323*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"vconstGeodesicEnDen", "[", 
+        RowBox[{"r", ",", "0.01", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"vconstGeodesicEnDen", "[", 
+        RowBox[{"r", ",", "5.", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"vconstGeodesicEnDen", "[", 
+        RowBox[{"r", ",", "10.", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"vconstGeodesicEnDen", "[", 
+        RowBox[{"r", ",", "20.", ",", "rN", ",", "R0"}], "]"}], ",", 
+       RowBox[{"vconstGeodesicEnDen", "[", 
+        RowBox[{"r", ",", "v", ",", "rN", ",", "R0"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", "0", ",", "10"}], "}"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<r\>\"", ",", 
+        "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(obs, v\)]\)\>\""}], "}"}]}], 
+     ",", 
+     RowBox[{"ExclusionsStyle", "\[Rule]", "Dashed"}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "50"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "10"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "0.01"}], ",", "0.12"}], "}"}]}], "}"}]}], ",", 
+     RowBox[{"AspectRatio", "\[Rule]", 
+      RowBox[{"1", "/", "GoldenRatio"}]}], ",", 
+     RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"LabelStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Bold", ",", " ", "20"}], "]"}]}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Directive", "[", 
+         RowBox[{"Black", ",", "Thick"}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{"Blue", ",", "Dashed", ",", "Thick"}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{"Red", ",", "Dotted", ",", "Thick"}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Darker", "[", "Green", "]"}], ",", "DotDashed", ",", 
+          "Thick"}], "]"}]}], "}"}]}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"LineLegend", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Directive", "[", 
+           RowBox[{"Black", ",", "Thick"}], "]"}], ",", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"Blue", ",", "Dashed", ",", "Thick"}], "]"}], ",", 
+          RowBox[{"Directive", "[", 
+           RowBox[{"Red", ",", "Dotted", ",", "Thick"}], "]"}], ",", 
+          RowBox[{"Directive", "[", 
+           RowBox[{
+            RowBox[{"Darker", "[", "Green", "]"}], ",", "DotDashed", ",", 
+            "Thick"}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<v=0.01\>\"", ",", "\"\<v=5\>\"", ",", "\"\<v=10\>\"", ",", 
+          "\"\<v=20\>\""}], "}"}]}], "]"}]}], ",", 
+     RowBox[{"AxesStyle", "\[Rule]", "Thick"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rN", ",", "2", ",", "\"\<rN\>\""}], "}"}], ",", "0", ",", "10",
+      ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"R0", ",", "0.0", ",", "\"\<R0\>\""}], "}"}], ",", "0", ",", 
+     "10", ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.9219386435096045`*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 2, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
+       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}}, Typeset`size$$ = {
+    607., {146., 151.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`rN$3301$$ = 
+    0, $CellContext`R0$3302$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 2}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`rN$$, $CellContext`rN$3301$$, 0], 
+        Hold[$CellContext`R0$$, $CellContext`R0$3302$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`vconstGeodesicEnDen[$CellContext`r, 
+          0.01, $CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`vconstGeodesicEnDen[$CellContext`r, 
+          5., $CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`vconstGeodesicEnDen[$CellContext`r, 
+          10., $CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`vconstGeodesicEnDen[$CellContext`r, 
+          20., $CellContext`rN$$, $CellContext`R0$$], 
+         $CellContext`vconstGeodesicEnDen[$CellContext`r, $CellContext`v, \
+$CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 10}, 
+        AxesLabel -> {"r", "\!\(\*SubscriptBox[\(\[Rho]\), \(obs, v\)]\)"}, 
+        ExclusionsStyle -> Dashed, PlotPoints -> 50, 
+        PlotRange -> {{0, 10}, {-0.01, 0.12}}, AspectRatio -> 1/GoldenRatio, 
+        GridLines -> Automatic, LabelStyle -> Directive[Bold, 20], PlotStyle -> {
+          Directive[Black, Thick], 
+          Directive[Blue, Dashed, Thick], 
+          Directive[Red, Dotted, Thick], 
+          Directive[
+           Darker[Green], DotDashed, Thick]}, PlotLegends -> LineLegend[{
+           Directive[Black, Thick], 
+           Directive[Blue, Dashed, Thick], 
+           Directive[Red, Dotted, Thick], 
+           Directive[
+            Darker[Green], DotDashed, Thick]}, {
+          "v=0.01", "v=5", "v=10", "v=20"}], AxesStyle -> Thick], 
+      "Specifications" :> {{{$CellContext`rN$$, 2, "rN"}, 0, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, Appearance -> 
+         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{658., {207., 213.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.9219383840517335`*^9, 3.921938701601465*^9, 
+  3.921939189513586*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"uconstGeodesicEnDen", "[", 
+       RowBox[{"r", ",", "v", ",", "rN", ",", "R0"}], "]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", "0", ",", "10"}], "}"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<r\>\"", ",", 
+        "\"\<\!\(\*SubscriptBox[\(\[Rho]\), \(obs, u\)]\)\>\""}], "}"}]}], 
+     ",", 
+     RowBox[{"ExclusionsStyle", "\[Rule]", "Dashed"}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "50"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"AspectRatio", "\[Rule]", 
+      RowBox[{"1", "/", "GoldenRatio"}]}], ",", 
+     RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"LabelStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Bold", ",", " ", "20"}], "]"}]}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Directive", "[", 
+        RowBox[{"Blue", ",", "Thick"}], "]"}], "}"}]}], ",", 
+     RowBox[{"AxesStyle", "\[Rule]", "Thick"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"rN", ",", "2", ",", "\"\<rN\>\""}], "}"}], ",", "0", ",", "10",
+      ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"R0", ",", "0.0", ",", "\"\<R0\>\""}], "}"}], ",", "0", ",", 
+     "10", ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"v", ",", "0", ",", "\"\<v\>\""}], "}"}], ",", "0", ",", "10", 
+     ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.921938629772663*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`R0$$ = 0., $CellContext`rN$$ = 
+    2, $CellContext`v$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`rN$$], 2, "rN"}, 0, 10}, {{
+       Hold[$CellContext`R0$$], 0., "R0"}, 0, 10}, {{
+       Hold[$CellContext`v$$], 0, "v"}, 0, 10}}, Typeset`size$$ = {
+    710., {212., 217.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`rN$3418$$ = 
+    0, $CellContext`R0$3419$$ = 0, $CellContext`v$3420$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`R0$$ = 0., $CellContext`rN$$ = 
+        2, $CellContext`v$$ = 0}, "ControllerVariables" :> {
+        Hold[$CellContext`rN$$, $CellContext`rN$3418$$, 0], 
+        Hold[$CellContext`R0$$, $CellContext`R0$3419$$, 0], 
+        Hold[$CellContext`v$$, $CellContext`v$3420$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`uconstGeodesicEnDen[$CellContext`r, $CellContext`v$$, \
+$CellContext`rN$$, $CellContext`R0$$]}, {$CellContext`r, 0, 10}, 
+        AxesLabel -> {"r", "\!\(\*SubscriptBox[\(\[Rho]\), \(obs, u\)]\)"}, 
+        ExclusionsStyle -> Dashed, PlotPoints -> 50, PlotRange -> Automatic, 
+        AspectRatio -> 1/GoldenRatio, GridLines -> Automatic, LabelStyle -> 
+        Directive[Bold, 20], PlotStyle -> {
+          Directive[Blue, Thick]}, AxesStyle -> Thick], 
+      "Specifications" :> {{{$CellContext`rN$$, 2, "rN"}, 0, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`R0$$, 0., "R0"}, 0, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`v$$, 0, "v"}, 0, 10, Appearance -> 
+         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{761., {287., 293.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.9219384248879957`*^9, 3.9219386315695763`*^9, 
+  3.921939229401506*^9}]
+}, Open  ]]
+},
+WindowSize->{1920, 989},
+WindowMargins->{{-4, Automatic}, {Automatic, -4}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1094, 24, 88, "Input"],
+Cell[1655, 46, 858, 16, 69, "Input"],
+Cell[2516, 64, 1814, 50, 123, "Input"],
+Cell[4333, 116, 597, 13, 69, "Input"],
+Cell[4933, 131, 403, 9, 88, "Input"],
+Cell[5339, 142, 1132, 31, 69, "Input"],
+Cell[6474, 175, 1485, 39, 126, "Input"],
+Cell[7962, 216, 1186, 35, 69, "Input"],
+Cell[9151, 253, 6228, 152, 88, "Input"],
+Cell[15382, 407, 3233, 73, 164, "Input"],
+Cell[18618, 482, 2038, 43, 69, "Input"],
+Cell[20659, 527, 1450, 22, 105, "Input"],
+Cell[22112, 551, 2136, 56, 107, "Input"],
+Cell[24251, 609, 12992, 322, 380, "Input"],
+Cell[37246, 933, 1214, 30, 88, "Input"],
+Cell[CellGroupData[{
+Cell[38485, 967, 1449, 36, 88, "Input"],
+Cell[39937, 1005, 151, 2, 30, "Output"]
+}, Open  ]],
+Cell[40103, 1010, 1051, 27, 50, "Input"],
+Cell[CellGroupData[{
+Cell[41179, 1041, 3070, 78, 89, "Input"],
+Cell[44252, 1121, 3321, 64, 377, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47610, 1190, 3170, 78, 88, "Input"],
+Cell[50783, 1270, 3123, 61, 365, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53943, 1336, 2387, 59, 88, "Input"],
+Cell[56333, 1397, 2699, 52, 339, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[59069, 1454, 2231, 57, 69, "Input"],
+Cell[61303, 1513, 2700, 52, 371, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64040, 1570, 3351, 81, 88, "Input"],
+Cell[67394, 1653, 3311, 65, 383, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[70742, 1723, 3626, 93, 119, "Input"],
+Cell[74371, 1818, 3345, 66, 383, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[77753, 1889, 3474, 87, 109, "Input"],
+Cell[81230, 1978, 3283, 63, 437, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[84550, 2046, 1836, 49, 52, "Input"],
+Cell[86389, 2097, 2655, 49, 597, "Output"]
+}, Open  ]]
+}
+]
+*)
+
